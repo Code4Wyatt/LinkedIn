@@ -55,10 +55,10 @@ class ProfileJumbotron extends React.Component {
                 </div>
 
                 <div className="mutual-connections">
-                  <Card.Subtitle className="mb-2 connections-title">
-                    500+ connections
+                  <Card.Subtitle className="mb-2 connections-title d-flex">
+                    <p className="connections-amount">500+</p> connections
                   </Card.Subtitle>
-                  <div className="d-flex">
+                  <div className="d-flex mutual-section">
                     <img
                       className="mutual-connections-images"
                       src="./assets/Tobias.jfif"

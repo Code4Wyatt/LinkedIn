@@ -39,7 +39,7 @@
 
 .card {
   overflow: hidden;
-  max-height: 460px;
+  max-height: 450px;
   border-bottom-left-radius: 2% !important;
   border-top-right-radius: 2% !important;
   border-top-left-radius: 2% !important;
@@ -99,6 +99,11 @@
   bottom: 115px;
 }
 
+.mutual-section {
+  position: relative;
+  bottom: 15px;
+}
+
 .mutual-connections-text {
   font-size: px;
   display: flex !important;
@@ -107,6 +112,13 @@
 .connections-title {
   font-weight: lighter !important;
   font-size: 15px !important;
+   color: grey;
+}
+
+.connections-amount {
+  font-weight: bolder;
+  color: grey;
+  margin-right: 5px;
 }
 
 .profile-experiences-preview {
@@ -118,7 +130,7 @@
 .profile-buttons-section {
   position: relative;
   text-align: start;
-  bottom: 110px;
+  bottom: 130px;
 }
 Button {
   border-bottom-left-radius: 50px !important;
