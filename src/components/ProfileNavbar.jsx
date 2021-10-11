@@ -19,7 +19,7 @@ export default function ProfileNavbar() {
         <div id='topNavbar'>
             <Navbar className='justify-content-between align-items-center p-0 flex-nowrap mt-2'>
                 <Row className=' align-items-center flex-nowrap' style={{marginLeft:'160px'}}>
-                    <Navbar.Brand > <img src={LinkedinLogo} alt="logo" /> </Navbar.Brand>
+                    <Navbar.Brand > <img src={LinkedinLogo} alt="logo"style={{width: '40px'}} /> </Navbar.Brand>
                     <Form style={{width: '250px'}}>
                         <IoSearchSharp />
                         <FormControl
@@ -62,7 +62,7 @@ export default function ProfileNavbar() {
                                 <Nav.Link>Notifications</Nav.Link>
                             </div>
                             <div className='menuItems line'>
-                             <img src="" alt="profile" />
+                           
                                 <NavDropdown title="Me" id="navbarScrollingDropdown">
                                     
                                     <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
