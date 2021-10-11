@@ -1,13 +1,13 @@
-import React,{useState} from 'react'; 
+import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
 class ProfileJumbotron extends React.Component {
-   constructor() {
+  constructor() {
     super();
-       this.state = {
-           data: [],
-           error: false,
-       };
+    this.state = {
+      data: [],
+      error: false,
+    };
   }
 
   async componentDidMount() {
@@ -27,15 +27,15 @@ class ProfileJumbotron extends React.Component {
         console.log(data);
       }
     } catch (error) {
-        console.log(error);
-        this.setState({ error: true });
+      console.log(error);
+      this.setState({ error: true });
     }
   }
 
   render() {
     return (
       <Container>
-        <Row className="row-cols-8">
+        <Row>
           <Col>
             <Card style={{ width: "50rem" }}>
               <Card.Body>
@@ -46,15 +46,14 @@ class ProfileJumbotron extends React.Component {
                   />
                 </div>
 
-                <img
-                  className="profile-picture"
-                  src={this.state.data.image}
-                />
+                <img className="profile-picture" src={this.state.data.image} />
                 <div className="container">
                   <div className="row">
                     <div className="col-xs-8">
                       <div className="profile-info">
-                                            <Card.Title>{this.state.data.name} {this.state.data.surname}</Card.Title>
+                        <Card.Title>
+                          {this.state.data.name} {this.state.data.surname}
+                        </Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">
                           {this.state.data.bio}
                         </Card.Subtitle>
