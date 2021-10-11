@@ -65,15 +65,15 @@ export default function ProfileNavbar() {
                            
                                 <NavDropdown title="Me" id="navbarScrollingDropdown">
                                     
-                                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
+                                    <NavDropdown.Item href="one">Action</NavDropdown.Item>
+                                    <NavDropdown.Item href="two">Another action</NavDropdown.Item>
                                     <NavDropdown.Divider />
-                                    <NavDropdown.Item href="#action5"> Help</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action5">manage</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action5"> Posts and Activity</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action5">  Company</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action5"> Job Posting Account</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action5">Sign Out</NavDropdown.Item>
+                                    <NavDropdown.Item href="three"> Help</NavDropdown.Item>
+                                    <NavDropdown.Item href="four">manage</NavDropdown.Item>
+                                    <NavDropdown.Item href="five"> Posts and Activity</NavDropdown.Item>
+                                    <NavDropdown.Item href="six">  Company</NavDropdown.Item>
+                                    <NavDropdown.Item href="seven"> Job Posting Account</NavDropdown.Item>
+                                    <NavDropdown.Item href="eight">Sign Out</NavDropdown.Item>
                                 </NavDropdown>
                             </div>
                             <div className="menuItems">

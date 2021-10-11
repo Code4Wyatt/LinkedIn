@@ -1,7 +1,9 @@
 import React from 'react'
+import LinkedinLogo from "../data/linkedin_logo.png";
 import { Container, Row, Form } from 'react-bootstrap'
 import { IoSettingsSharp } from "react-icons/io5";
 import { BsQuestionCircleFill } from "react-icons/bs";
+
 import "../Footer.css";
 
 
@@ -10,7 +12,7 @@ export default function ProfileFooter() {
         <>
         <div id='footer'>
             <Container>
-                <Row><div><img src="" alt="" /></div></Row>
+                <Row><div id ='linked'>Linked<img src={LinkedinLogo} alt=""style={{width: '30px'}} /></div></Row>
                 <Row className='pb-2'>
                     <div className='listgroup'>
                         <ul>
