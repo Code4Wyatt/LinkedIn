@@ -3,8 +3,7 @@ import { Card, Button, ProgressBar, Container } from "react-bootstrap";
 const FirstCard = () => {
   return (
     <Container>
-      <Card clasName="card" style={{ paddingBottom: "1.5rem" }}>
-        <Card.Header></Card.Header>
+      <Card clasName="card-first" style={{ paddingBottom: "1.5rem" }}>
         <Card.Body>
           <Card.Title>
             <header

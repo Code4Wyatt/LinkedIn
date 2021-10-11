@@ -62,13 +62,36 @@
   justify-content: space-between;
 }
 
-.card {
+.card-first {
   padding-top: 7px;
   border-radius: 20px !important;
   margin-top: 13px;
   border-top-color: blue !important;
 }
+.card {
+  padding-top: 7px;
+  border-radius: 20px !important;
+  margin-top: 13px;
+}
 
 span {
   display: block;
+}
+.dashboard {
+  display: block;
+  text-align: start;
+}
+
+.svg-icon {
+  margin-right: 10px !important;
+}
+
+.detail-p {
+  display: block;
+  text-align: start;
+}
+
+.desh-container {
+  border-radius: 25px;
+  border: 10px;
 }

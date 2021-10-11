@@ -13,8 +13,8 @@ const SecondCard = () => {
               <div style={{ marginRight: "10px" }}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
+                  width="11"
+                  height="11"
                   fill="currentColor"
                   class="bi bi-chevron-left"
                   viewBox="0 0 16 16"
@@ -48,7 +48,7 @@ const SecondCard = () => {
           <Card.Text>
             <div>
               <Row>
-                <Col sm={2}>
+                <Col sm={3}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="200"
@@ -63,15 +63,20 @@ const SecondCard = () => {
                 <Col>
                   <Row>
                     <Col>
-                      <div style={{ display: "flex", flexDirection: "start" }}>
+                      <div className="detail-p">
                         <h1>
                           Let’s update your headline to match your current
                           education
                         </h1>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit.
+                        </p>
                       </div>
-                      <div style={{ display: "flex", flexDirection: "start" }}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      </div>
+                      {/*  <div style={{ display: "flex", justifyContent: "start" }}>
+                        
+                        
+                      </div> */}
                     </Col>
                   </Row>
                 </Col>
