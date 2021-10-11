@@ -36,3 +36,105 @@
     transform: rotate(360deg);
   }
 }
+
+.card {
+  overflow: hidden;
+  max-height: 450px;
+  border-bottom-left-radius: 2% !important;
+  border-top-right-radius: 2% !important;
+  border-top-left-radius: 2% !important;
+  border-bottom-right-radius: 2% !important;
+
+}
+
+
+.profile-banner {
+  position: relative;
+  left: -20px;
+  top: -20px;
+  height: 200px;
+  object-fit: cover;
+  
+}
+
+.profile-picture {
+  border-radius: 95%;
+  height: 150px;
+  z-index: 1;
+  position: relative;
+  top: -125px;
+  right: 290px;
+  border: 3px solid white;
+}
+
+.profile-info {
+  text-align: start;
+  position: relative;
+  top: -120px;
+  
+}
+
+.experiences-img {
+  height: 20px;
+}
+
+.mutual-connections-images {
+  height: 30px;
+  border-radius: 50%;
+}
+
+.mutual-connections-images-2 {
+  height: 30px;
+  border-radius: 50%;
+  z-index: 2;
+  position: relative;
+  right: 15px;
+
+}
+
+.mutual-connections {
+  text-align: start;
+  position: relative;
+  bottom: 115px;
+}
+
+.mutual-section {
+  position: relative;
+  bottom: 15px;
+}
+
+.mutual-connections-text {
+  font-size: px;
+  display: flex !important;
+}
+
+.connections-title {
+  font-weight: lighter !important;
+  font-size: 15px !important;
+   color: grey;
+}
+
+.connections-amount {
+  font-weight: bolder;
+  color: grey;
+  margin-right: 5px;
+}
+
+.profile-experiences-preview {
+  position: relative;
+  bottom: 85px;
+  left: 100px;
+  text-align: start;
+}
+.profile-buttons-section {
+  position: relative;
+  text-align: start;
+  bottom: 130px;
+}
+Button {
+  border-bottom-left-radius: 50px !important;
+  border-top-right-radius: 50px !important;
+  border-top-left-radius: 50px!important;
+  border-bottom-right-radius:50px !important;
+ margin-right: 10px !important;
+}
