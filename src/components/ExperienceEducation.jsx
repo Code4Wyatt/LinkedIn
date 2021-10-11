@@ -51,10 +51,11 @@ class ExperienceEducation extends React.Component {
                     <h8>January 2018 - July 2021</h8>
                   </a>
                 </div>
-                <div className="experience-content-section ml-2">
-                  <p>
-                    Managed client accounts, provided quotes, processed sales. Prospecting new clients.
-                  </p>
+                            <div className="experience-content-section ml-2">
+                                <ul><li>Managed client accounts</li>
+                                <li>Provided quotes and processed sales</li>
+                                <li>Prospected new clients</li></ul>
+                  
                 </div>
                 <hr />
               </div>
