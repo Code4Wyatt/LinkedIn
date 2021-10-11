@@ -69,7 +69,7 @@ class ProfileJumbotron extends React.Component {
                     ></img>
                     <a className="mutual-connections-link text-muted" href="#">
                       <p className="mutual">
-                        12 mutual connections: Tobia De Angelis, Stefano
+                        <b>12 mutual connections:</b> Tobia De Angelis, Stefano
                         Casasasola and 10 others
                       </p>
                     </a>
