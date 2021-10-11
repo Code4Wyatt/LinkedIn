@@ -13,7 +13,7 @@ class ProfileJumbotron extends React.Component {
   async componentDidMount() {
     try {
       const response = await fetch(
-        "https://striveschool-api.herokuapp.com/api/profile/{5d84937322b7b54d848eb41b}",
+        "https://striveschool-api.herokuapp.com/api/profile/me",
         {
           headers: new Headers({
             Authorization:
