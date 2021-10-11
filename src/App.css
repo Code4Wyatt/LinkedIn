@@ -94,4 +94,39 @@ span {
 .desh-container {
   border-radius: 25px;
   border: 10px;
+  background-color: #dce6f0 !important;
+}
+
+h2 {
+  color: rgb(46, 46, 46) !important;
+}
+
+.desh-body {
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.desh-header {
+  border-radius: 10px;
+  border: 1px solid;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 5px;
+  /*  border-left: 1px solid rgb(233, 233, 233); */
+}
+.desh-header-main {
+}
+
+.creator-section {
+  border-radius: 10px !important;
+  border: 1px solid;
+  padding-left: 1px;
+  padding-right: 2px;
+  padding-bottom: 2px;
+  padding-top: 1px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.creation-section1 {
+  border-radius: 25px !important;
 }
