@@ -58,3 +58,9 @@
   right: 250px;
   border: 3px solid white;
 }
+
+.profile-info {
+  text-align: start;
+  position: relative;
+  top: -60px;
+}
