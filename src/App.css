@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+
 
 .App-logo {
   height: 40vmin;
@@ -138,3 +136,55 @@ Button {
   border-bottom-right-radius:50px !important;
  margin-right: 10px !important;
 }
+
+
+.App {
+  background-color: rgb(223, 221, 221);
+  
+}
+
+.sideBarRow {
+
+  border-radius: 10px;
+  border-color: grey;
+  font-weight: 400;
+  margin-top: 24px;
+  width: 70%;
+  background-color: white;
+}
+
+.sideBarList {
+  
+  vertical-align: middle;
+}
+
+.sideBarCon {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.jobImg {
+  border-radius: 10px;
+}
+
+.sideBarPeople {
+
+  display: flex;
+  flex-direction: column;
+}
+
+.peopleImg {
+
+  border-radius: 80px;
+}
+
+.sideImgCol {
+
+  border-radius: 80px;
+  padding: 0;
+    align-self: center;
+  justify-content: center;
+}
+
+
