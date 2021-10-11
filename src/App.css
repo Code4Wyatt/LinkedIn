@@ -36,3 +36,39 @@
     transform: rotate(360deg);
   }
 }
+
+.artdeco-button {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 167ms;
+  align-items: center;
+  border: none;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  display: inline-flex;
+  justify-content: center;
+  min-width: 6.4rem;
+  max-width: 480px;
+  overflow: hidden;
+  text-align: center;
+  transition-property: background-color, box-shadow, color;
+  vertical-align: middle;
+}
+
+.header-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  padding-top: 7px;
+  border-radius: 20px !important;
+  margin-top: 13px;
+  border-top-color: blue !important;
+}
+
+span {
+  display: block;
+}
