@@ -1,38 +1,25 @@
-#topNavbar .form-control:focus {
-    border: none;
-    box-shadow: none;
-}
 
-#topNavbar #navbarScroll img {
-    width: 25px;
-    border-radius: 50%;
-}
+#search{
+  
+    margin-top: 0px;
+    
+ }
 
-#topNavbar #navbarScroll svg {
-    width: 25px;
-    height: 25px;
-    color: rgba(51, 49, 49, 0.829);
-}
-
-#topNavbar #navbarScroll .nav-link {
+#ProfileNavbar #navbarScroll .nav-link {
    font-size: 0.8em;
    color: rgb(80, 78, 78);
    padding: 5px 0px 0px 0px;
    
 }
-#topNavbar #navbarScroll .menuItems {
+#ProfileNavbar #navbarScroll .menuItems {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 90px;
 }
-#topNavbar #navbarScroll .menuItems:last-child {
 
-    width: 120px;
-}
-
-#topNavbar #navbarScroll h5 {
+#ProfileNavbar #navbarScroll h5 {
     word-spacing: 3px;
     font-size: 12px;
     text-align: center;
@@ -42,7 +29,7 @@
     margin: 0px;
 }
 
-#topNavbar .line {
+#ProfileNavbar .line {
     border-right: solid 1px silver;
     width: 1px;
     margin: 0px;

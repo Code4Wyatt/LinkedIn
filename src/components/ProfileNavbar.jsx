@@ -16,12 +16,12 @@ export default function ProfileNavbar() {
 
 
     return (
-        <div id='topNavbar'>
+        <div id='ProfileNavbar'>
             <Navbar className='justify-content-between align-items-center p-0 flex-nowrap mt-2'>
                 <Row className=' align-items-center flex-nowrap' style={{marginLeft:'160px'}}>
                     <Navbar.Brand > <img src={LinkedinLogo} alt="logo"style={{width: '40px'}} /> </Navbar.Brand>
                     <Form style={{width: '250px'}}>
-                        <IoSearchSharp />
+                        <IoSearchSharp id="search"/>
                         <FormControl
                             type="search"
                             placeholder="Search"
@@ -40,7 +40,7 @@ export default function ProfileNavbar() {
                         >
                             <div className='menuItems'>
                             
-                            <AiTwotoneHome  />
+                            <AiTwotoneHome   />
                                 <Nav.Link>Home</Nav.Link>
                             </div>
                             
