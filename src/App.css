@@ -39,11 +39,12 @@
 
 .card {
   overflow: hidden;
-  max-height: 480px;
+  max-height: 485px;
   border-bottom-left-radius: 2% !important;
   border-top-right-radius: 2% !important;
   border-top-left-radius: 2% !important;
   border-bottom-right-radius: 2% !important;
+
 }
 
 .profile-banner {
@@ -107,15 +108,17 @@
   position: relative;
   bottom: 85px;
   left: 100px;
+  text-align: start;
 }
 .profile-buttons-section {
   position: relative;
   text-align: start;
   bottom: 80px;
 }
-.buttons {
+Button {
   border-bottom-left-radius: 15% !important;
   border-top-right-radius: 15% !important;
   border-top-left-radius: 15% !important;
   border-bottom-right-radius: 15% !important;
+ 
 }
