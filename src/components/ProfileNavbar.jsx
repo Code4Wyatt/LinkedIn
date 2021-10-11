@@ -1,7 +1,7 @@
 import React from 'react'
 import '../Navbar.css'
 import LinkedinLogo from "../data/linkedin_logo.png";
-import { Navbar, Nav, NavDropdown, Form, FormControl, Row } from 'react-bootstrap'
+import { Navbar, Nav, NavDropdown, Form, FormControl, Row ,InputGroup} from 'react-bootstrap'
 import { AiTwotoneHome } from 'react-icons/ai'
 import { FaUsers, FaBell } from "react-icons/fa";
 import { IoIosBriefcase } from "react-icons/io";
@@ -20,15 +20,23 @@ export default function ProfileNavbar() {
             <Navbar className='justify-content-between align-items-center p-0 flex-nowrap mt-2'>
                 <Row className=' align-items-center flex-nowrap' style={{marginLeft:'160px'}}>
                     <Navbar.Brand > <img src={LinkedinLogo} alt="logo"style={{width: '40px'}} /> </Navbar.Brand>
-                    <Form style={{width: '250px'}}>
-                        <IoSearchSharp id="search"/>
-                        <FormControl
-                            type="search"
-                            placeholder="Search"
-                            className="mr-2"
-                            aria-label="Search"
-                        />
-                    </Form>
+                    
+                    <InputGroup className="flex-row mb-2">
+                <InputGroup.Text
+                  style={{
+                    height: "2.4rem",
+                    width: "2.5rem",
+                    borderRadius: "0.25rem 0px 0px 0.25rem",
+                    backgroundColor: "#EEF3F8",
+                    borderRight: 0,
+                    paddingLeft: "1rem",
+                    paddingRight: "0",
+                  }}
+                >
+                 <IoSearchSharp id="searchicon"/>
+                </InputGroup.Text>
+                <FormControl id="inlineFormInputGroup" placeholder="Search" />
+              </InputGroup>
                 </Row>
                 <Row  style={{marginRight:'160px'}}>
                     <Navbar.Toggle aria-controls="navbarScroll" />
