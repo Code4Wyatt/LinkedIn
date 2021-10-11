@@ -1,12 +1,15 @@
 
 #footer {
+  
     margin: 0px;
     padding: 0px;
+    background-color: rgb(255, 253, 253);
 }
 #linked {
-  font-size: 30px;
-  font-weight:700;
-  color:rgb(52, 108, 172)
+  font-size: 25px;
+  font-weight:600;
+  color:rgb(79, 113, 206);
+  padding-top:35px
 }
 
 #footer .row:first-child img {
@@ -19,8 +22,9 @@
     margin: 0px;
     padding: 0px;
     font-size: 13px;
-    font-weight: 700;
-    color: #201c1cbb;
+   
+    color:grey;
+    
 }
 
 
@@ -28,6 +32,7 @@
     list-style-type: none;
     width: 200px;
     height: 30px;
+    color:grey;
 }
 
 #footer .settings {
@@ -58,7 +63,7 @@
 
 #footer .form-group  {
     width: 300px;
-    background-color: #F3F2EF ;
+    background-color: #acaaa7 ;
 
   
 }

@@ -3,7 +3,8 @@ import '../Navbar.css'
 import LinkedinLogo from "../data/linkedin_logo.png";
 import { Navbar, Nav, NavDropdown, Form, FormControl, Row ,InputGroup} from 'react-bootstrap'
 import { AiTwotoneHome } from 'react-icons/ai'
-import { FaUsers, FaBell } from "react-icons/fa";
+import { ImUsers} from "react-icons/im";
+import { FaBell } from "react-icons/fa";
 import { IoIosBriefcase } from "react-icons/io";
 import { IoSearchSharp } from "react-icons/io5";
 import { RiMessage3Fill } from "react-icons/ri";
@@ -19,9 +20,9 @@ export default function ProfileNavbar() {
         <div id='ProfileNavbar'>
             <Navbar className='justify-content-between align-items-center p-0 flex-nowrap mt-2'>
                 <Row className=' align-items-center flex-nowrap' style={{marginLeft:'160px'}}>
-                    <Navbar.Brand > <img src={LinkedinLogo} alt="logo"style={{width: '40px'}} /> </Navbar.Brand>
+                    <Navbar.Brand > <img src={LinkedinLogo} alt="logo"style={{width: '40px',marginTop:'12px'}} /> </Navbar.Brand>
                     
-                    <InputGroup className="flex-row mb-2">
+                    <InputGroup className="flex-row mb-2 mt-4">
                 <InputGroup.Text
                   style={{
                     height: "2.4rem",
@@ -33,7 +34,7 @@ export default function ProfileNavbar() {
                     paddingRight: "0",
                   }}
                 >
-                 <IoSearchSharp id="searchicon"/>
+                 <IoSearchSharp />
                 </InputGroup.Text>
                 <FormControl id="inlineFormInputGroup" placeholder="Search" />
               </InputGroup>
@@ -48,25 +49,25 @@ export default function ProfileNavbar() {
                         >
                             <div className='menuItems'>
                             
-                            <AiTwotoneHome   />
+                            <div  style={{ fontSize: '30px' }}><AiTwotoneHome   /></div>
                                 <Nav.Link>Home</Nav.Link>
                             </div>
                             
                             <div className='menuItems'>
-                                <FaUsers />
+                              <div style={{ fontSize: '30px' }}><ImUsers /></div>
                                 <Nav.Link>My Network</Nav.Link>
                             </div>
                             <div className='menuItems'>
-                                <IoIosBriefcase />
+                               <div  style={{ fontSize: '30px' }}> <IoIosBriefcase /></div>
                                 <Nav.Link>Jobs</Nav.Link>
                             </div>
                             <div className='menuItems'>
-                               <RiMessage3Fill />
+                              <div   style={{ fontSize: '30px' }}><RiMessage3Fill /></div>
                                 <Nav.Link>Messaging</Nav.Link>
 
                             </div>
                             <div className='menuItems'>
-                                <FaBell />
+                               <div  style={{ fontSize: '30px' }}> <FaBell /></div>
                                 <Nav.Link>Notifications</Nav.Link>
                             </div>
                             <div className='menuItems line'>
@@ -85,7 +86,7 @@ export default function ProfileNavbar() {
                                 </NavDropdown>
                             </div>
                             <div className="menuItems">
-                                <CgMenuGridR />
+                               <div  style={{ fontSize: '30px' }}><CgMenuGridR /></div>
                                 <NavDropdown title="Work" id="navbarScrollingDropdown">
                                     <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                                     <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>

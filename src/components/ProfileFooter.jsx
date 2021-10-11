@@ -12,7 +12,7 @@ export default function ProfileFooter() {
         <>
         <div id='footer'>
             <Container>
-                <Row><div id ='linked'>Linked<img src={LinkedinLogo} alt=""style={{width: '30px'}} /></div></Row>
+                <Row><div id ='linked'>Linked<img src={LinkedinLogo} alt=""style={{width: '20px', height:'20px',marginBottom:'4px'}} /></div></Row>
                 <Row className='pb-2'>
                     <div className='listgroup'>
                         <ul>
