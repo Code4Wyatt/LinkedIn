@@ -9,10 +9,6 @@ class ProfileJumbotron extends React.Component {
            error: false,
        };
   }
-  
-    
-
-    
 
   async componentDidMount() {
     try {
