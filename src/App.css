@@ -138,3 +138,51 @@ Button {
   border-bottom-right-radius:50px !important;
  margin-right: 10px !important;
 }
+
+.experience-section {
+  text-align: start;
+}
+
+.experience-section > h5 {
+  position: relative;
+  left: 20px;
+}
+
+.education-section {
+  text-align: start;
+}
+
+.education-section > h5 {
+  position: relative;
+  left: 20px;
+}
+
+.experience-images {
+  height: 70px;
+}
+
+.experience-card {
+  max-height: 700rem;
+  padding-top: 10px;
+}
+
+a {
+  text-decoration: none !important;
+  color: black !important;
+}
+
+.contact-info-link {
+  color: rgb(69, 69, 250) !important;
+}
+
+.experience-titles-section-education {
+  width: 100rem;
+  font-size: 15px;
+}
+
+.education-images {
+  position: relative;
+  margin-top: 10px;
+  border-radius: 50% !important;
+  height: 50px;
+}

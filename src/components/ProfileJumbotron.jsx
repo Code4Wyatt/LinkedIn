@@ -58,7 +58,7 @@ class ProfileJumbotron extends React.Component {
                           {this.state.data.bio}
                         </Card.Subtitle>
                         <Card.Subtitle className="mb-2 text-muted">
-                          {this.state.data.area} <a href="#">Contact Info</a>
+                          {this.state.data.area} <a className="contact-info-link" href="#">Contact Info</a>
                         </Card.Subtitle>
                       </div>
                     </div>
