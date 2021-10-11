@@ -8,11 +8,13 @@ class ProfileJumbotron extends React.Component {
         <Row className="row-cols-8">
           <Col>
             <Card style={{ width: "50rem" }}>
-              <Card.Body>
-                <img
+                        <Card.Body>
+                       <div className="profile-banner-container"><img
                   className="profile-banner"
                   src="./assets/profilebanner.png"
-                />
+                            /></div>     
+                
+                            
                 <img
                   className="profile-picture"
                   src="./assets/profilepicture.jfif"
