@@ -1,39 +1,73 @@
-import React from "react";
+import React,{useState} from 'react'; 
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
 class ProfileJumbotron extends React.Component {
+   constructor() {
+    super();
+       this.state = {
+           data: [],
+           error: false,
+       };
+  }
+  
+    
+
+    
+
+  async componentDidMount() {
+    try {
+      const response = await fetch(
+        "https://striveschool-api.herokuapp.com/api/profile/me",
+        {
+          headers: new Headers({
+            Authorization:
+              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTY0MWYwMWE4OTBjYzAwMTVjZjA3ZWYiLCJpYXQiOjE2MzM5NTE0ODksImV4cCI6MTYzNTE2MTA4OX0.vx77x7lAtcX0LJjTGsp1uSzKGgE5K7MlKFsN70cMX5Q",
+          }),
+        }
+      );
+      if (response.ok) {
+        const data = await response.json();
+        this.setState({ error: false, data });
+        console.log(data);
+      }
+    } catch (error) {
+        console.log(error);
+        this.setState({ error: true });
+    }
+  }
+
   render() {
     return (
       <Container>
         <Row className="row-cols-8">
           <Col>
             <Card style={{ width: "50rem" }}>
-                        <Card.Body>
-                       <div className="profile-banner-container"><img
-                  className="profile-banner"
-                  src="./assets/profilebanner.png"
-                            /></div>     
-                
-                            
+              <Card.Body>
+                <div className="profile-banner-container">
+                  <img
+                    className="profile-banner"
+                    src="./assets/profilebanner.png"
+                  />
+                </div>
+
                 <img
                   className="profile-picture"
-                  src="./assets/profilepicture.jfif"
+                  src={this.state.data.image}
                 />
-                <div class="container">
-                  <div class="row">
-                    <div class="col-xs-8">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-xs-8">
                       <div className="profile-info">
-                        <Card.Title>Diego Banovaz</Card.Title>
+                                            <Card.Title>{this.state.data.name} {this.state.data.surname}</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">
-                          COO & Co-Founder @ Strive School (YC S20) - WE ARE
-                          HIRING
+                          {this.state.data.bio}
                         </Card.Subtitle>
                         <Card.Subtitle className="mb-2 text-muted">
-                          Berlin, Berlin, Germany <a href="#">Contact Info</a>
+                          {this.state.data.area} <a href="#">Contact Info</a>
                         </Card.Subtitle>
                       </div>
                     </div>
-                    <div class="col-xs-4">
+                    <div className="col-xs-4">
                       <div className="profile-experiences-preview">
                         <div>
                           <img
