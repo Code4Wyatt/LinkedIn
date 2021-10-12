@@ -1,7 +1,7 @@
 import React from 'react'
 import '../Navbar.css'
 import LinkedinLogo from "../data/linkedin_logo.png";
-import { Navbar, Nav, NavDropdown, Form, FormControl, Row ,InputGroup} from 'react-bootstrap'
+import { Navbar, Nav, NavDropdown, Form, FormControl, Row ,InputGroup,Button} from 'react-bootstrap'
 import { AiTwotoneHome } from 'react-icons/ai'
 import { ImUsers} from "react-icons/im";
 import { FaBell } from "react-icons/fa";
@@ -73,14 +73,15 @@ export default function ProfileNavbar() {
                             <div className='menuItems line'>
                            
                                 <NavDropdown title="Me" id="navbarScrollingDropdown">
-                                    
+                                    <Button style={{ marginLeft: '35px' }}>View Profile</Button>
                                     <NavDropdown.Item href="one">Action</NavDropdown.Item>
                                     <NavDropdown.Item href="two">Another action</NavDropdown.Item>
                                     <NavDropdown.Divider />
                                     <NavDropdown.Item href="three"> Help</NavDropdown.Item>
+                                    <NavDropdown.Item href="six"> Language</NavDropdown.Item>
                                     <NavDropdown.Item href="four">manage</NavDropdown.Item>
                                     <NavDropdown.Item href="five"> Posts and Activity</NavDropdown.Item>
-                                    <NavDropdown.Item href="six">  Company</NavDropdown.Item>
+                                    
                                     <NavDropdown.Item href="seven"> Job Posting Account</NavDropdown.Item>
                                     <NavDropdown.Item href="eight">Sign Out</NavDropdown.Item>
                                 </NavDropdown>
