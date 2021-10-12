@@ -1,6 +1,13 @@
 #ProfileSkill {
 margin-top: 20%;
 }
+.btn {
+    background-color:white;
+    border-radius: 17px;
+    width:150px;
+    transition-duration: 0.7s;
+}
+
 #add-new{
  font-size: 20px;
 
@@ -8,12 +15,7 @@ margin-top: 20%;
 #add-new:hover{
  background-color: rgb(245, 236, 236);
  }
- .btn {
-       background-color:white;
-       border-radius: 17px;
-       width:150px;
-       transition-duration: 0.7s;
-  }
+
  #pen-icon:hover{
             background-color: rgb(207, 202, 202); 
             border-radius: 10px;
