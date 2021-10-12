@@ -45,6 +45,10 @@
 
 }
 
+.profile-container {
+  margin-bottom: 200px !important;
+}
+
 
 .profile-banner {
   position: relative;
@@ -134,7 +138,7 @@ Button {
   border-top-right-radius: 50px !important;
   border-top-left-radius: 50px!important;
   border-bottom-right-radius:50px !important;
- margin-right: 10px !important;
+  margin-right: 10px !important;
 }
 
 
@@ -187,4 +191,29 @@ Button {
   justify-content: center;
 }
 
+<<<<<<< Updated upstream
 
+=======
+.education-images {
+  position: relative;
+  margin-top: 10px;
+  border-radius: 50% !important;
+  height: 50px;
+  left: 10px;
+  margin-right: 20px;
+}
+
+
+.btns {
+  width: 100px;
+}
+
+.add-selection-dropdown {
+  z-index: 2 !important;
+}
+
+.dropdown {
+  position: relative;
+  z-index: 2;
+}
+>>>>>>> Stashed changes
