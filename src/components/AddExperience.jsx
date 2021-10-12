@@ -25,12 +25,44 @@ class AddExperience extends React.Component {
     })
 }
 
+handleSubmit = async (e) => {
+  e.preventDefault()
   
-  handleSubmit(event) {
-    alert("E' stato inserito un'esperienza: " + this.state.workExperience.role);
-    console.log(this.state.workExperience)
-    event.preventDefault();
+  console.log(this.state.workExperience)
+  let id = "6163fc59a890cc0015cf07ed"
+  try {
+      let response = await fetch(`https://striveschool-api.herokuapp.com/api/profile/:${id}/experiences`, {
+          method: 'POST',
+          body: JSON.stringify(this.state.workExperience),
+          headers: {
+            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTYzZmM1OWE4OTBjYzAwMTVjZjA3ZWQiLCJpYXQiOjE2MzM5NDI2MTgsImV4cCI6MTYzNTE1MjIxOH0.Aut8mQArR8IfI07aKxRS8oT9D5L-g1Uz5d36Mdj55L0',
+            'Content-type': 'application/json',
+              
+          }
+      })
+      console.log(response)
+      if (response.ok) {
+          alert('Work experience successfully added!')
+          this.setState({
+              // this is the initial state of my form!
+              workExperience: {
+                role: "",
+                company: "",
+                startDate: "",
+                endDate: "",
+                description: "",
+                area: "",
+              }
+          })
+      } else {
+          alert('Something went wrong ')
+      }
+  } catch (error) {
+      console.log(error)
   }
+}
+
+  
   render() {
     return (
       <>
@@ -49,7 +81,7 @@ class AddExperience extends React.Component {
           <Modal.Body>
             
             <Form.Group>
-              <Form.Label>Title° </Form.Label>
+              <Form.Label className="workFormLabel">Title° </Form.Label>
               <Form.Control
                 type="text"
                 onChange={e => this.handleInput('role', e.target.value)}
@@ -58,7 +90,7 @@ class AddExperience extends React.Component {
               />
             </Form.Group>
             <Form.Group controlId="exampleForm.ControlSelect1">
-              <Form.Label>Employment type</Form.Label>
+              <Form.Label className="workFormLabel" className="workFormLabel">Employment type</Form.Label >
               <Form.Control as="select">
                 <option>Please select</option>
                 <option>Full-time</option>
@@ -70,8 +102,8 @@ class AddExperience extends React.Component {
                 <option>Apprenticeship</option>
                 <option>Seasonable</option>
               </Form.Control>
-              <Form.Label>Country-specific employment types </Form.Label>
-               <div>
+              <Form.Label >Country-specific employment types </Form.Label>
+               <div className="workFormLabel">
                 <a href="#" style={{ fontWeight: "bold" }}>
                  
                   Learn more
@@ -79,7 +111,7 @@ class AddExperience extends React.Component {
               </div> 
             </Form.Group>
           <Form.Group>
-              <Form.Label>Company name° </Form.Label>
+              <Form.Label className="workFormLabel">Company name° </Form.Label>
               <Form.Control
                 type="text"
                 onChange={e => this.handleInput('company', e.target.value)}
@@ -88,7 +120,7 @@ class AddExperience extends React.Component {
               />
             </Form.Group>
               <Form.Group>
-              <Form.Label>Location </Form.Label>
+              <Form.Label className="workFormLabel">Location </Form.Label>
               <Form.Control
                 type="text"
                 onChange={e => this.handleInput('area', e.target.value)}
@@ -99,7 +131,7 @@ class AddExperience extends React.Component {
             <Row>
               <Col>
                 <Form.Group controlId="exampleForm.ControlSelect1">
-                  <Form.Label>Start date°</Form.Label>
+                  <Form.Label className="workFormLabel">Start date°</Form.Label>
                   <Form.Control 
                     as="select"
                   >
@@ -121,7 +153,7 @@ class AddExperience extends React.Component {
               </Col>
               <Col>
                 <Form.Group>
-                <Form.Label></Form.Label>
+                <Form.Label className="workFormLabel invLabel"> aa </Form.Label>
                   <Form.Control
                     type="text"
                     onChange={e => this.handleInput('startDate', e.target.value)}
@@ -134,7 +166,7 @@ class AddExperience extends React.Component {
            <Row> 
               <Col>
                 <Form.Group controlId="exampleForm.ControlSelect1">
-                  <Form.Label>End date°</Form.Label>
+                  <Form.Label className="workFormLabel">End date°</Form.Label>
                   <Form.Control as="select">
                     <option>Month</option>
                     <option>Jenuary</option>
@@ -154,7 +186,7 @@ class AddExperience extends React.Component {
               </Col>
               <Col>
                 <Form.Group>
-                <Form.Label></Form.Label>
+                <Form.Label className="workFormLabel invLabel">aa</Form.Label>
                   <Form.Control
                     type="text"
                     onChange={e => this.handleInput('endDate', e.target.value)}
@@ -165,7 +197,7 @@ class AddExperience extends React.Component {
               </Col>
             </Row>
              <Form.Group controlId="exampleForm.ControlTextarea1">
-              <Form.Label>Description</Form.Label>
+              <Form.Label className="workFormLabel">Description</Form.Label>
               <Form.Control as="textarea" rows={3} 
               onChange={e => this.handleInput('description', e.target.value)}
               value={this.state.workExperience.description}
@@ -197,3 +229,4 @@ class AddExperience extends React.Component {
 }
 
 export default AddExperience;
+

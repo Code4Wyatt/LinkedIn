@@ -322,4 +322,11 @@ Button {
   z-index: 2;
 }
 
+ .workFormLabel {
 
+  margin-top: 20px;
+}
+
+.invLabel {
+  color: white;
+} 
