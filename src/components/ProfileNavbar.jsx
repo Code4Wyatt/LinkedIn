@@ -10,11 +10,7 @@ import { IoSearchSharp } from "react-icons/io5";
 import { RiMessage3Fill } from "react-icons/ri";
 import { CgMenuGridR } from "react-icons/cg";
 
-
-
 export default function ProfileNavbar() {
-
-
 
     return (
         <div id='ProfileNavbar'>
@@ -73,7 +69,7 @@ export default function ProfileNavbar() {
                             <div className='menuItems line'>
                            
                                 <NavDropdown title="Me" id="navbarScrollingDropdown">
-                                    <Button id="Nav button">View Profile</Button>
+                                    <Button id="Nav button"style={{color:'rgb(79, 113, 206)', fontWeight:'700'}}>View Profile</Button>
                                     <NavDropdown.Item href="one">Action</NavDropdown.Item>
                                     <NavDropdown.Item href="two">Another action</NavDropdown.Item>
                                     <NavDropdown.Divider />
