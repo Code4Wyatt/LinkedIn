@@ -35,6 +35,109 @@
   }
 }
 
+
+.artdeco-button {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 167ms;
+  align-items: center;
+  border: none;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  display: inline-flex;
+  justify-content: center;
+  min-width: 6.4rem;
+  max-width: 480px;
+  overflow: hidden;
+  text-align: center;
+  transition-property: background-color, box-shadow, color;
+  vertical-align: middle;
+}
+
+.header-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-first {
+  padding-top: 7px;
+  border-radius: 20px !important;
+  margin-top: 13px;
+  border-top-color: blue !important;
+}
+.card {
+  padding-top: 7px;
+  border-radius: 20px !important;
+  margin-top: 13px;
+}
+
+span {
+  display: block;
+}
+.dashboard {
+  display: block;
+  text-align: start;
+}
+
+.svg-icon {
+  margin-right: 10px !important;
+}
+
+.detail-p {
+  display: block;
+  text-align: start;
+}
+
+.desh-container {
+  border-radius: 25px;
+  border: 10px;
+  background-color: #dce6f0 !important;
+}
+
+h2 {
+  color: rgb(46, 46, 46) !important;
+}
+
+.desh-body {
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.desh-header {
+  border-radius: 10px;
+
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 5px;
+  background-color: white !important;
+  /*  border-left: 1px solid rgb(233, 233, 233); */
+}
+.desh-header-main {
+}
+
+.creator-section {
+  border-radius: 10px !important;
+  border-top-left-radius: 25% !important;
+  border-top-right-radius: 25% !important;
+
+  padding-left: 1px;
+  padding-right: 2px;
+  padding-bottom: 2px;
+  padding-top: 1px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#btn {
+  border: 0px !important;
+  border-radius: 5px !important;
+}
+/* .border {
+  border-top-left-radius: 25% !important;
+} */
+
 .card {
   overflow: hidden;
   max-height: 450px;
@@ -191,9 +294,6 @@ Button {
   justify-content: center;
 }
 
-<<<<<<< Updated upstream
-
-=======
 .education-images {
   position: relative;
   margin-top: 10px;
@@ -216,4 +316,4 @@ Button {
   position: relative;
   z-index: 2;
 }
->>>>>>> Stashed changes
+
