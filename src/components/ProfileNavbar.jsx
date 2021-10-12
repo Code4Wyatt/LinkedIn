@@ -73,7 +73,7 @@ export default function ProfileNavbar() {
                             <div className='menuItems line'>
                            
                                 <NavDropdown title="Me" id="navbarScrollingDropdown">
-                                    <Button style={{ marginLeft: '35px' }}>View Profile</Button>
+                                    <Button id="Nav button">View Profile</Button>
                                     <NavDropdown.Item href="one">Action</NavDropdown.Item>
                                     <NavDropdown.Item href="two">Another action</NavDropdown.Item>
                                     <NavDropdown.Divider />

@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React , { Component} from "react";
 import ProfileNavbar from './components/ProfileNavbar';
 import ProfileFooter from './components/ProfileFooter';
+import ProfileSkill from './components/ProfileSkill';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <header className="App-header">
         <div>
           <ProfileNavbar/>
+          <ProfileSkill/>
           <ProfileFooter/>
           </div>
         

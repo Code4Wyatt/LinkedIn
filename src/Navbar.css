@@ -1,12 +1,15 @@
 
-
-
 #ProfileNavbar #navbarScroll .nav-link {
    font-size: 0.8em;
    color: rgb(80, 78, 78);
    padding: 5px 0px 0px 0px;
    
 }
+
+#ProfileNavbar  {
+   background-color:white;
+    
+ }
 #ProfileNavbar #navbarScroll .menuItems {
     display: flex;
     flex-direction: column;
