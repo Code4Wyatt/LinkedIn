@@ -1,3 +1,325 @@
+
 #root{
     background-color: rgb(248, 247, 246);
     }
+
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.artdeco-button {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 167ms;
+  align-items: center;
+  border: none;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  display: inline-flex;
+  justify-content: center;
+  min-width: 6.4rem;
+  max-width: 480px;
+  overflow: hidden;
+  text-align: center;
+  transition-property: background-color, box-shadow, color;
+  vertical-align: middle;
+}
+
+.header-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-first {
+  padding-top: 7px;
+  border-radius: 20px !important;
+  margin-top: 13px;
+  border-top-color: blue !important;
+}
+.card {
+  padding-top: 7px;
+  border-radius: 20px !important;
+  margin-top: 13px;
+}
+
+span {
+  display: block;
+}
+.dashboard {
+  display: block;
+  text-align: start;
+}
+
+.svg-icon {
+  margin-right: 10px !important;
+}
+
+.detail-p {
+  display: block;
+  text-align: start;
+}
+
+.desh-container {
+  border-radius: 25px;
+  border: 10px;
+  background-color: #dce6f0 !important;
+}
+
+h2 {
+  color: rgb(46, 46, 46) !important;
+}
+
+.desh-body {
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.desh-header {
+  border-radius: 10px;
+
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 5px;
+  background-color: white !important;
+  /*  border-left: 1px solid rgb(233, 233, 233); */
+}
+.desh-header-main {
+}
+
+.creator-section {
+  border-radius: 10px !important;
+  border-top-left-radius: 25% !important;
+  border-top-right-radius: 25% !important;
+
+  padding-left: 1px;
+  padding-right: 2px;
+  padding-bottom: 2px;
+  padding-top: 1px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#btn {
+  border: 0px !important;
+  border-radius: 5px !important;
+}
+/* .border {
+  border-top-left-radius: 25% !important;
+} */
+
+.card {
+  overflow: hidden;
+  max-height: 450px;
+  border-bottom-left-radius: 2% !important;
+  border-top-right-radius: 2% !important;
+  border-top-left-radius: 2% !important;
+  border-bottom-right-radius: 2% !important;
+
+}
+
+.profile-container {
+  margin-bottom: 200px !important;
+}
+
+
+.profile-banner {
+  position: relative;
+  left: -20px;
+  top: -20px;
+  height: 200px;
+  object-fit: cover;
+  
+}
+
+.profile-picture {
+  border-radius: 95%;
+  height: 150px;
+  z-index: 1;
+  position: relative;
+  top: -125px;
+  right: 290px;
+  border: 3px solid white;
+}
+
+.profile-info {
+  text-align: start;
+  position: relative;
+  top: -120px;
+  
+}
+
+.experiences-img {
+  height: 20px;
+}
+
+.mutual-connections-images {
+  height: 30px;
+  border-radius: 50%;
+}
+
+.mutual-connections-images-2 {
+  height: 30px;
+  border-radius: 50%;
+  z-index: 2;
+  position: relative;
+  right: 15px;
+
+}
+
+.mutual-connections {
+  text-align: start;
+  position: relative;
+  bottom: 115px;
+}
+
+.mutual-section {
+  position: relative;
+  bottom: 15px;
+}
+
+.mutual-connections-text {
+  font-size: px;
+  display: flex !important;
+}
+
+.connections-title {
+  font-weight: lighter !important;
+  font-size: 15px !important;
+   color: grey;
+}
+
+.connections-amount {
+  font-weight: bolder;
+  color: grey;
+  margin-right: 5px;
+}
+
+.profile-experiences-preview {
+  position: relative;
+  bottom: 85px;
+  left: 100px;
+  text-align: start;
+}
+.profile-buttons-section {
+  position: relative;
+  text-align: start;
+  bottom: 130px;
+}
+Button {
+  border-bottom-left-radius: 50px !important;
+  border-top-right-radius: 50px !important;
+  border-top-left-radius: 50px!important;
+  border-bottom-right-radius:50px !important;
+  margin-right: 10px !important;
+}
+
+
+.App {
+  background-color: rgb(223, 221, 221);
+  
+}
+
+.sideBarRow {
+
+  border-radius: 10px;
+  border-color: grey;
+  font-weight: 400;
+  margin-top: 24px;
+  width: 70%;
+  background-color: white;
+}
+
+.sideBarList {
+  
+  vertical-align: middle;
+}
+
+.sideBarCon {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.jobImg {
+  border-radius: 10px;
+}
+
+.sideBarPeople {
+
+  display: flex;
+  flex-direction: column;
+}
+
+.peopleImg {
+
+  border-radius: 80px;
+}
+
+.sideImgCol {
+
+  border-radius: 80px;
+  padding: 0;
+    align-self: center;
+  justify-content: center;
+}
+
+.education-images {
+  position: relative;
+  margin-top: 10px;
+  border-radius: 50% !important;
+  height: 50px;
+  left: 10px;
+  margin-right: 20px;
+}
+
+
+.btns {
+  width: 100px;
+}
+
+.add-selection-dropdown {
+  z-index: 2 !important;
+}
+
+.dropdown {
+  position: relative;
+  z-index: 2;
+}
+
+
