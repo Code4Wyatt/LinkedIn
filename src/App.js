@@ -1,14 +1,17 @@
-import ProfileNavbar from './components/ProfileNavbar';
-import ProfileFooter from './components/ProfileFooter';
-import ProfileSkill from './components/ProfileSkill';
+import ProfileNavbar from "./components/ProfileNavbar";
+import ProfileFooter from "./components/ProfileFooter";
+import ProfileSkill from "./components/ProfileSkill";
+import Deshboard from "./components/hicards/DeshBoard";
+import FirstCard from "./components/hicards/FirstCard";
+import SecondCard from "./components/hicards/SecondCard";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SideBar from "./components/SideBar";
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col, Button, Container } from "react-bootstrap";
 import ProfileJumbotron from "./components/ProfileJumbotron";
 import AddExperience from "./components/AddExperience";
 import React from "react";
-
+import ExperienceEducation from "./components/ExperienceEducation";
 
 class App extends React.Component {
   state = {
@@ -17,18 +20,22 @@ class App extends React.Component {
 
   showModal = () => this.setState({ showModal: true });
   closeModal = () => this.setState({ showModal: false });
- 
 
   render() {
     return (
       <>
         <div className="App">
-      <ProfileNavbar/>
+          <ProfileNavbar />
           <Row>
             <Col xs={12} md={8}>
-              <ProfileJumbotron />
-              <ProfileSkill/>
-      
+              <Container className="d-flex flex-column">
+                <ProfileJumbotron className="justify-content-end"/>
+                <FirstCard />
+                <SecondCard />
+                <Deshboard />
+                <ProfileSkill />
+                <ExperienceEducation />
+
               <Button onClick={this.showModal}>Add experience</Button>
 
               {this.state.showModal ? (
@@ -38,17 +45,17 @@ class App extends React.Component {
                   handleSubmit={this.handleSubmit}
                 />
               ) : null}
+              </Container>
             </Col>
             <Col xs={12} md={4}>
               <SideBar />
             </Col>
           </Row>
-          <ProfileFooter/>
+          <ProfileFooter />
         </div>
       </>
     );
   }
-
 }
 
 export default App;

@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-import React,{useState} from 'react'; 
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
-=======
-import React from "react";
+import React, { useState } from "react";
 import {
   Container,
   Row,
@@ -13,23 +9,16 @@ import {
   DropdownButton,
   ListGroup,
 } from "react-bootstrap";
->>>>>>> Stashed changes
 
 class ProfileJumbotron extends React.Component {
-   constructor() {
+  constructor() {
     super();
-<<<<<<< Updated upstream
-       this.state = {
-           data: [],
-           error: false,
-       };
-=======
+
     this.state = {
       data: [],
       error: false,
       toggle: false,
     };
->>>>>>> Stashed changes
   }
 
   async fetchProfiles(props) {
@@ -74,20 +63,15 @@ class ProfileJumbotron extends React.Component {
         console.log(data);
       }
     } catch (error) {
-        console.log(error);
-        this.setState({ error: true });
+      console.log(error);
+      this.setState({ error: true });
     }
   }
 
   render() {
     return (
-<<<<<<< Updated upstream
-      <Container>
-        <Row className="row-cols-8">
-=======
       <Container className="profile-container">
         <Row>
->>>>>>> Stashed changes
           <Col>
             <Card style={{ width: "50rem" }}>
               <Card.Body>
@@ -98,27 +82,22 @@ class ProfileJumbotron extends React.Component {
                   />
                 </div>
 
-                <img
-                  className="profile-picture"
-                  src={this.state.data.image}
-                />
+                <img className="profile-picture" src={this.state.data.image} />
                 <div className="container">
                   <div className="row">
                     <div className="col-xs-8">
                       <div className="profile-info">
-                                            <Card.Title>{this.state.data.name} {this.state.data.surname}</Card.Title>
+                        <Card.Title>
+                          {this.state.data.name} {this.state.data.surname}
+                        </Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">
                           {this.state.data.bio}
                         </Card.Subtitle>
                         <Card.Subtitle className="mb-2 text-muted">
-<<<<<<< Updated upstream
-                          {this.state.data.area} <a href="#">Contact Info</a>
-=======
                           {this.state.data.area}{" "}
                           <a className="contact-info-link" href="#">
                             Contact Info
                           </a>
->>>>>>> Stashed changes
                         </Card.Subtitle>
                       </div>
                     </div>
@@ -208,12 +187,12 @@ class ProfileJumbotron extends React.Component {
                       </svg>
                     </Dropdown.Item>
                     <ListGroup>
-  <ListGroup.Item>Cras justo odio</ListGroup.Item>
-  <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-  <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-  <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-  <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-</ListGroup>
+                      <ListGroup.Item>Cras justo odio</ListGroup.Item>
+                      <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+                      <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+                      <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+                      <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+                    </ListGroup>
                     <Dropdown.Item as="button">
                       Featured{" "}
                       <svg
