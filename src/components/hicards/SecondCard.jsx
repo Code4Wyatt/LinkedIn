@@ -85,7 +85,16 @@ const SecondCard = () => {
           </Card.Text>
           <Row style={{ flexFlow: "row-reverse" }}>
             <div>
-              <Button style={{ marginRight: "10px" }}>Not Now</Button>
+              <button
+                style={{
+                  marginRight: "10px ",
+                }}
+                type="button"
+                class="btn btn-light"
+              >
+                Not Now
+              </button>
+
               <Button variant="primary" style={{ borderRadius: "25px" }}>
                 Update headline
               </Button>

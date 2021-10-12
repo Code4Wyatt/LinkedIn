@@ -131,6 +131,10 @@ h2 {
   margin-bottom: 5px;
 }
 
+#btn {
+  border: 0px !important;
+  border-radius: 5px !important;
+}
 /* .border {
   border-top-left-radius: 25% !important;
 } */
