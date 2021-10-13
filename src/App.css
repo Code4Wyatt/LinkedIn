@@ -140,10 +140,7 @@ h2 {
 .card {
   /*  overflow: hidden; */
   max-height: 540px;
-  border-bottom-left-radius: 2% !important;
-  border-top-right-radius: 2% !important;
-  border-top-left-radius: 2% !important;
-  border-bottom-right-radius: 2% !important;
+  border-radius: 15px;
 }
 
 .profile-container {
@@ -151,9 +148,14 @@ h2 {
 }
 
 .profile-banner {
+  width: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  border-radius: 15px;
   position: relative;
-  left: -20px;
-  top: -30px;
+  /*  left: -20px;*/
+  top: -24px;
   height: 200px;
   object-fit: cover;
 }
@@ -311,18 +313,15 @@ Button {
 }
 
 .loginContainer {
-
   height: 640px;
   position: relative;
 }
 
 #loginForm {
-
-width: 300px;
-position: absolute;
-left: 40%;
-top: 30%;
-
+  width: 300px;
+  position: absolute;
+  left: 40%;
+  top: 30%;
 }
 
 .homeContainer {
