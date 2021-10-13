@@ -1,6 +1,6 @@
 import React from "react"
 import {Container, Row, Col} from 'react-bootstrap'
-
+import PostOnFeed from "../PostOnFeed"
 
 class Home extends React.Component {
 
@@ -16,7 +16,7 @@ class Home extends React.Component {
 
                         </Col>
                         <Col xs={5}> {/* here we have posts */}
-
+                        <PostOnFeed />
                         </Col>
                     </Row>
 
