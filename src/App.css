@@ -323,3 +323,37 @@ Button {
   left: 40%;
   top: 30%;
 }
+
+.homeContainer {
+
+  border-radius: 10px;
+  border-color: grey;
+  font-weight: 400;
+  margin-top: 24px;
+  min-width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+#postModalBtn {
+  color: grey !important;
+  border-color: grey !important;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+  
+}
+
+#postModalBtn:hover {
+  background-color: rgba(128, 128, 128, 0.205);
+}
+
+.postFileName {
+  margin-left: 10px;
+}
+
+.postFiles:hover{
+  background-color: rgba(128, 128, 128, 0.205);
+  border-radius: 10px;
+}

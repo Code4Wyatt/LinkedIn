@@ -10,7 +10,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import ProfilePage from "./components/ProfilePage";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-
+import Home from "./components/Homepage/Home";
 
 class App extends React.Component {
   state = {
@@ -29,6 +29,9 @@ class App extends React.Component {
 
           <Router>
             <Switch>
+              <Route path="/home/:userId">
+                <Home />
+                </Route>
             <Route path="/profile/:userId">
                 <ProfilePage />
               </Route>
@@ -64,6 +67,22 @@ class App extends React.Component {
                       }
                     >
                       Login
+                    </Link>
+                    <Link
+                      to={"/home/" + this.state.ourProfile}
+                      className="btn btn-primary"
+                      style={{
+                        width: "100px",
+                        marginTop: "20px",
+                        color: "blue",
+                      }}
+                      onClick={(e) =>
+                        alert(
+                          `${this.state.ourProfile} profile is about to be shown`
+                        )
+                      }
+                    >
+                      Home
                     </Link>
                   </Form>
                 </Container>

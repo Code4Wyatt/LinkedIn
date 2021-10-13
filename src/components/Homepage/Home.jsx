@@ -1,6 +1,7 @@
 import React from "react"
 import {Container, Row, Col} from 'react-bootstrap'
-
+import PostOnFeed from "../PostOnFeed"
+import { withRouter } from "react-router";
 
 class Home extends React.Component {
 
@@ -12,11 +13,11 @@ class Home extends React.Component {
                 <Row>
                     <Col xs={12} md={8}> {/* left bar and posts column */}
                     <Row>
-                        <Col xs={3}> {/* here leftside bar */}
+                        <Col xs={4}> {/* here leftside bar */}
 
                         </Col>
-                        <Col xs={5}> {/* here we have posts */}
-
+                        <Col xs={8}> {/* here we have posts */}
+                        <PostOnFeed />
                         </Col>
                     </Row>
 
@@ -32,4 +33,4 @@ class Home extends React.Component {
     }
 }
 
-export default Home
+export default withRouter(Home) 
