@@ -2,6 +2,7 @@ import React from "react"
 import {Container, Row, Col} from 'react-bootstrap'
 import PostOnFeed from "./PostOnFeed"
 import { withRouter } from "react-router";
+import LeftSideBar from "./LeftSideBar";
 
 class Home extends React.Component {
 
@@ -14,7 +15,7 @@ class Home extends React.Component {
                     <Col xs={12} md={8}> {/* left bar and posts column */}
                     <Row>
                         <Col xs={4}> {/* here leftside bar */}
-
+                         <LeftSideBar />
                         </Col>
                         <Col xs={8}> {/* here we have posts */}
                         <PostOnFeed />
