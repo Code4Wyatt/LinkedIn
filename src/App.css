@@ -263,7 +263,11 @@ h2 {
 }
 
 .leftSideBarCard {
-  max-height: auto;
+  max-height: auto !important;
+}
+
+.leftSideBarCardBody {
+  height: 200px !important;
 }
 
 .leftSideBarButtonsSection {
@@ -282,7 +286,7 @@ Button {
 .App {
   background-color: rgb(223, 221, 221);
 }
-.
+
 .sideBarRow {
   border-radius: 10px;
   border-color: grey;

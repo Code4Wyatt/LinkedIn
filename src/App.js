@@ -10,13 +10,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import ProfilePage from "./components/ProfilePage";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-<<<<<<< Updated upstream
 import Home from "./components/Homepage/Home";
 import LeftSideBar from "./components/Homepage/LeftSideBar";
-=======
-import LeftSideBar from "./components/Homepage/LeftSideBar";
-
->>>>>>> Stashed changes
 
 class App extends React.Component {
   state = {
@@ -33,10 +28,6 @@ class App extends React.Component {
        <div className="App">
           <ProfileNavbar />
           <LeftSideBar />
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
           <Router>
             <Switch>
               <Route path="/home/:userId">

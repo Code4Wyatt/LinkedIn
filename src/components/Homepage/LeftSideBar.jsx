@@ -71,14 +71,14 @@ class LeftSideBar extends React.Component {
           <Card.Img
             className="sideBarBanner"
             variant="top"
-            src="./assets/profilebanner.png"
+            src="../assets/profilebanner.png"
           />
           <Card.Img
             className="sideBarAvatar"
             variant="top"
-            src="./assets/profilepicture.png"
+            src="../assets/profilepicture.png"
           />
-          <Card.Body>
+          <Card.Body className="leftSideBarCardBody">
             <div class="leftSideBarTitles">
               <Card.Title>
                 {this.state.data.name} {this.state.data.surname}{" "}
@@ -104,10 +104,10 @@ class LeftSideBar extends React.Component {
                   </b>
                 </div>
               </a>
-                        <hr />
-                        <div className="my-items-btn d-flex">
-                            < BsFillBookmarkFill /> <b>My items</b>
-            </div>
+              <hr />
+              <div className="my-items-btn d-flex">
+                <BsFillBookmarkFill /> <b>My items</b>
+              </div>
             </div>
           </Card.Body>
         </Card>
