@@ -11,9 +11,10 @@ class ExperienceEducation extends React.Component {
   }
 
   async componentDidMount() {
+    let id = '61641f01a890cc0015cf07ef'
     try {
       const response = await fetch(
-        "https://striveschool-api.herokuapp.com/api/profile/5d925e677360c41e0046d1f5/experiences",
+        `https://striveschool-api.herokuapp.com/api/profile/${id}/experiences`,
         {
           headers: new Headers({
             Authorization:
