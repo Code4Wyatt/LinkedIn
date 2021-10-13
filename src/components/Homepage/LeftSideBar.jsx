@@ -1,8 +1,9 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card, Container, Col, Badge } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FcKey } from "react-icons/fc";
 import { BsFillBookmarkFill } from "react-icons/bs";
+import Row from "react-bootstrap/Row";
 
 class LeftSideBar extends React.Component {
   constructor() {
@@ -43,74 +44,66 @@ class LeftSideBar extends React.Component {
 
   async componentDidMount() {
     this.fetchSideBarData();
-    /* try {
-      const response = await fetch(
-        "https://striveschool-api.herokuapp.com/api/profile/me",
-        {
-          headers: new Headers({
-            Authorization:
-              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTY0MWYwMWE4OTBjYzAwMTVjZjA3ZWYiLCJpYXQiOjE2MzM5NTE0ODksImV4cCI6MTYzNTE2MTA4OX0.vx77x7lAtcX0LJjTGsp1uSzKGgE5K7MlKFsN70cMX5Q",
-          }),
-        }
-      );
-      if (response.ok) {
-        const data = await response.json();
-        this.setState({ error: false, data });
-        console.log(data);
-      }
-    } catch (error) {
-      console.log(error);
-      this.setState({ error: true });
-    } */
   }
 
   render() {
     return (
       <>
-        <Card className="leftSideBarCard" style={{ width: "14rem" }}>
-          <Card.Img
-            className="sideBarBanner"
-            variant="top"
-            src="../assets/profilebanner.png"
-          />
-          <Card.Img
-            className="sideBarAvatar"
-            variant="top"
-            src="../assets/profilepicture.png"
-          />
-          <Card.Body className="leftSideBarCardBody">
-            <div class="leftSideBarTitles">
-              <Card.Title>
-                {this.state.data.name} {this.state.data.surname}{" "}
-              </Card.Title>
-              <Card.Title>{this.state.data.bio}</Card.Title>
-              <hr />
+        <Container className="homeContainer">
+          <Row>
+            <img
+              className="img-fluid w-100 sideBarBanner"
+              alt=""
+              src="../assets/profilebanner.png"
+            />
+            <img
+              className="sideBarAvatar"
+              alt=""
+              src="../assets/profilepicture.png"
+            />
+          </Row>
+          <Row className="justify-content-center borderBottomRow">
+            <span
+              style={{
+                textAlign: "center",
+                fontWeight: "bold",
+                fontSize: "20px",
+              }}
+              className="welcomeName"
+            >
+              Welcome, {this.state.data.name}!
+            </span>
+            <span style={{ padding: "10px" }}>{this.state.data.bio}</span>
+          </Row>
+          <Row
+            className="justify-content-between borderBottomRow hoverRow"
+            style={{ padding: "10px" }}
+          >
+            <p>
+              <span style={{ color: "grey", fontWeight: "bolder" }}>
+                Connections
+              </span>
+              <span style={{ fontWeight: "bolder" }}>Grow your network</span>
+            </p>
+
+            <span class="badge" style={{ color: "blue" }}>
+              28
+            </span>
+          </Row>
+          <Row className="borderBottomRow hoverRow">
+            <div style={{ padding: "10px" }}>
+              <p>Access exclusive tools & insights</p>
+              <b className="hoverTextBold">
+                <FcKey /> Try premium for free
+              </b>
             </div>
-            <div className="leftSideBarButtonsSection">
-              <div>
-                <a href="/connections">
-                  <h5 className="connections-btn">Connections</h5>
-                  <h7 className="connections-btn-expand">
-                    Expand your network
-                  </h7>
-                </a>
-              </div>
-              <hr />
-              <a href="/connections">
-                <div className="access-tools-btn">
-                  <p>Access exclusive tools & insights</p>
-                  <b>
-                    <FcKey /> Try premium for free
-                  </b>
-                </div>
-              </a>
-              <hr />
-              <div className="my-items-btn d-flex">
-                <BsFillBookmarkFill /> <b>My items</b>
-              </div>
+          </Row>
+          <Row className="hoverRow" style={{ padding: "10px" }}>
+            <div className="d-flex">
+              <BsFillBookmarkFill style={{ color: "grey" }} /> <b>My items</b>
             </div>
-          </Card.Body>
-        </Card>
+          </Row>
+        </Container>
       </>
     );
   }
