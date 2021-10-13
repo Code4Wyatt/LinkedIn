@@ -1,10 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Card } from "react-bootstrap";
+import { useParams } from 'react-router-dom';
 
-class ExperienceEducation extends React.Component {
-  render() {
-    return (
-      <Card className="experience-card" style={{ width: "50rem"}}>
+const ExperienceEducation = ({match}) => {
+  const [Experience, setExperience] = useState([]);
+  const [data, setData] = useState([]);
+  const [id, setId] = useState(this.props.match.params.id)
+    
+  useEffect(() => {
+    fetchExperiences();
+  }, [id]) 
+  
+  
+  const fetchExperiences = async () => {
+    const { id } = useParams();
+    try {
+      const response = await fetch(
+        `https://striveschool-api.herokuapp.com/api/profile/:${id}/experiences`,
+        {
+          headers: new Headers({
+            Authorization:
+              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTY0MWYwMWE4OTBjYzAwMTVjZjA3ZWYiLCJpYXQiOjE2MzM5NTE0ODksImV4cCI6MTYzNTE2MTA4OX0.vx77x7lAtcX0LJjTGsp1uSzKGgE5K7MlKFsN70cMX5Q",
+          }),
+        }
+      );
+      if (response.ok) {
+        const data = await response.json();
+        this.setState({ data })
+        console.log("experiences data:", data)
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+
+  
+return (
+      <>
+      <Card className="experience-card" style={{ width: "50rem" }}>
         <div className="experience-section">
           <h5>Experience</h5>
           <Card.Body>
@@ -88,8 +122,8 @@ class ExperienceEducation extends React.Component {
           </Card.Body>
         </div>
       </Card>
+      </>
     );
-  }
-}
+    };
 
 export default ExperienceEducation;
