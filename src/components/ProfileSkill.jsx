@@ -60,26 +60,7 @@ export default function ProfileSkill() {
             Add a new skill
       </h6>
 
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
-      </div>
-      <div className="col-2">
-        <span id="editprofilediv">
-          <BsPencil className="editprofileicon"onClick={handleShow} />
-        </span>
-        <Modal show={show} onHide={handleClose} >
+      <Modal show={show} onHide={handleClose} >
         <Modal.Header closeButton>
           <Modal.Title>Add Skills</Modal.Title>
         </Modal.Header>
@@ -119,15 +100,25 @@ export default function ProfileSkill() {
             </Col>
           </Row>
         </Container></Modal.Body>
+        <div id="myDIV" class="header">
+  
+  <input type="text" id="myInput" placeholder="Skill..."/>
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
+         
+          <Button variant="primary"style={{background:'blue'}}  onClick={handleClose}>
             Save Changes
           </Button>
         </Modal.Footer>
       </Modal>
+      </div>
+      <div className="col-2">
+        <span id="editprofilediv">
+          <BsPencil className="editprofileicon" />
+        </span>
+        
+        
         </div>
       </div>
     </div>

@@ -25,3 +25,7 @@ margin-top: 20%;
         background-color: #1f6422; /* Green */
         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
         }
+        .addBtn:hover{
+           width: 50px;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            }
