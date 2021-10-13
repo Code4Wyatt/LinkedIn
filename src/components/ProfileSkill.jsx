@@ -70,15 +70,15 @@ export default function ProfileSkill() {
           <Row id ="add-skill-button">
     
             <Col xs={6} md={4}>
-              <Button>Networking<input type="checkbox" />
+              <Button>Networking <input type="checkbox" />
     <span class="seatButton"></span></Button>
             </Col>
             <Col xs={6} md={4}>
-            <Button>Frontend<input type="checkbox" />
+            <Button>Frontend <input type="checkbox" />
     <span class="seatButton"></span></Button>
             </Col>
             <Col xs={6} md={4}>
-            <Button>Engineering<input type="checkbox" />
+            <Button>Engineering <input type="checkbox" />
     <span class="seatButton"></span></Button>
             </Col>
           </Row>
@@ -91,11 +91,11 @@ export default function ProfileSkill() {
   </label></Button>
             </Col>
             <Col xs={6} md={4}>
-            <Button>Accounting<input type="checkbox" />
+            <Button>Accounting <input type="checkbox" />
     <span class="seatButton"></span></Button>
             </Col>
             <Col xs={6} md={4}>
-            <Button>Scrum<input type="checkbox" />
+            <Button>Scrum <input type="checkbox" />
     <span class="seatButton"></span></Button>
             </Col>
           </Row>
