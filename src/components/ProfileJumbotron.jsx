@@ -73,7 +73,7 @@ class ProfileJumbotron extends React.Component {
       <Container className="profile-container">
         <Row>
           <Col style={{ display: "flex", justifyContent: "end" }}>
-            <Card style={{ width: "50rem" }}>
+            <Card>
               <Card.Body>
                 <div className="profile-banner-container">
                   <img
