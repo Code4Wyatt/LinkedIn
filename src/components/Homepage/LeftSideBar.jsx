@@ -18,7 +18,7 @@ class LeftSideBar extends React.Component {
   async fetchSideBarData() {
     try {
       const response = await fetch(
-        `https://striveschool-api.herokuapp.com/api/profile/me`,
+        `https://striveschool-api.herokuapp.com/api/profile/${this.props.userId}`,
         {
           headers: {
             Authorization:
@@ -78,7 +78,7 @@ class LeftSideBar extends React.Component {
             variant="top"
             src="../assets/profilepicture.png"
           />
-          <Card.Body className="leftSideBarCardBody">
+          <Card.Body className="leftSideBarCard">
             <div class="leftSideBarTitles">
               <Card.Title>
                 {this.state.data.name} {this.state.data.surname}{" "}
