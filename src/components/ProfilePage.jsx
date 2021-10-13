@@ -26,7 +26,7 @@ class ProfilePage extends React.Component {
     return (
       <Row>
         <Col xs={4}> {/* here leftside bar */}
-                     <LeftSideBar />
+                     
                         </Col>
         <Col xs={12} md={8}>
           <Container className="d-flex flex-column">
