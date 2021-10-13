@@ -106,7 +106,7 @@ export default function ProfileSkill() {
   <span onclick="newElement()" class="addBtn">Add</span>
 </div>
         <Modal.Footer>
-         
+         comment
           <Button variant="primary"style={{background:'blue'}}  onClick={handleClose}>
             Save Changes
           </Button>

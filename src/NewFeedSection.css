@@ -113,3 +113,11 @@
   .topmidmargin {
       margin-top: 4.5rem;
   }
+  #formGroupEmail{
+   border-radius: 20px;
+   margin-left: 15%;
+   margin-bottom:20px ;
+   margin-right:20% ;
+   width:70%
+  }
+  

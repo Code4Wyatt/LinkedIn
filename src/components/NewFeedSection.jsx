@@ -1,5 +1,5 @@
 
-import { Card, Col, Button, Row } from "react-bootstrap";
+import { Card, Col, Button, Row,Container ,Form} from "react-bootstrap";
 import "../NewFeedSection.css";
 import logo from "../data/logo.png";
 import { CgMathPlus } from "react-icons/cg";
@@ -14,7 +14,8 @@ export default function NewFeedSection() {
 
   return (
     <div>
-      
+    <Container>
+     
 
       <Card className="mt-3 mb-3">
         <Card.Body>
@@ -43,15 +44,15 @@ export default function NewFeedSection() {
               Users think 52% of support calls could have been resolved through optimized content.
                What are you doing to help your customers get the right answer
                 <br />
-                Everywhere.
+          
               </Card.Text>
             </Col>
           </Row>
         </Card.Body>
         <Card.Img
           variant="bottom"
-          className="mb-3" 
-          src=""
+          className="mb-3 d-flex justify-content-center" 
+          src="holder.js/500x500"round
         />
         <div
           id="interaction"
@@ -64,7 +65,7 @@ export default function NewFeedSection() {
        
           <Button className="midbutton pb-3" variant="light">
             <BiCommentDetail style={{ color: "#6b6b6b" }} size="1.3rem" />{" "}
-            Comment
+          
           </Button>
           <Button className="midbutton pb-3" variant="light">
             <RiShareForwardLine style={{ color: "#6b6b6b" }} size="1.3rem" />{" "}
@@ -73,11 +74,22 @@ export default function NewFeedSection() {
           <Button className="midbutton pb-3" variant="light">
             <RiSendPlaneFill style={{ color: "#6b6b6b" }} size="1.3rem" /> Send
           </Button>
+
+
         </div>
+ <div>      
+    <Form>
+  <Form.Group controlId="formGroupEmail">
+   
+    <Form.Control type="text" placeholder="Add a Comment" />
+  </Form.Group>
+  
+</Form></div>
       </Card>
 
-     
-    </div>
-  );
+      </Container>
+      </div>
+   
+  )
 };
 
