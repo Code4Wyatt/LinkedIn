@@ -29,22 +29,22 @@ class App extends React.Component {
           <Row>
             <Col xs={12} md={8}>
               <Container className="d-flex flex-column">
-                <ProfileJumbotron className="justify-content-end"/>
+                <ProfileJumbotron />
                 <FirstCard />
                 <SecondCard />
                 <Deshboard />
                 <ProfileSkill />
                 <ExperienceEducation />
 
-              <Button onClick={this.showModal}>Add experience</Button>
+                <Button onClick={this.showModal}>Add experience</Button>
 
-              {this.state.showModal ? (
-                <AddExperience
-                  closeModal={this.closeModal}
-                  showModal={this.state.showModal}
-                  handleSubmit={this.handleSubmit}
-                />
-              ) : null}
+                {this.state.showModal ? (
+                  <AddExperience
+                    closeModal={this.closeModal}
+                    showModal={this.state.showModal}
+                    handleSubmit={this.handleSubmit}
+                  />
+                ) : null}
               </Container>
             </Col>
             <Col xs={12} md={4}>
