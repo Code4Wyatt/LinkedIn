@@ -1,30 +1,31 @@
 
 import { Card, Col, Button, Row,Container ,Form} from "react-bootstrap";
-import "../NewFeedSection.css";
+import "../SinglePost.css";
 import logo from "../data/logo.png";
 import { CgMathPlus } from "react-icons/cg";
 import { AiOutlineLike } from "react-icons/ai";
 import { BiCommentDetail } from "react-icons/bi";
+import { BsThreeDots } from "react-icons/bs";
 import { RiSendPlaneFill, RiShareForwardLine } from "react-icons/ri";
 
 
 
 
-export default function NewFeedSection() {
-
+export default function   SinglePost() {
+  
   return (
     <div>
-    <Container>
-     
-
-      <Card className="mt-3 mb-3">
+      
+    <Container >
+    
+      <Card className="mt-3 mb-3"style={{height:'50rem'}}>
         <Card.Body>
           <Row>
             <Col className="col-md-1 mr-2">
               <Card.Img
                 variant="top-left"
-                className="shopifylogo"
-                src=""
+                className="shopifylogo" style={{borderRadius:'15px'}}
+                src={logo}
               />
             </Col>
             <Col className="col-md-9">
@@ -41,18 +42,18 @@ export default function NewFeedSection() {
           <Row>
             <Col className="col-md-12">
               <Card.Text className="shopifytext mt-2">
-              Users think 52% of support calls could have been resolved through optimized content.
-               What are you doing to help your customers get the right answer
+             say something
+            
                 <br />
-          
+                Everywhere.
               </Card.Text>
             </Col>
           </Row>
         </Card.Body>
         <Card.Img
           variant="bottom"
-          className="mb-3 d-flex justify-content-center" 
-          src="holder.js/500x500"round
+         style={{marginBottom:'30px',width:'100%',height:'30%'}} 
+          src={logo}
         />
         <div
           id="interaction"
@@ -65,7 +66,7 @@ export default function NewFeedSection() {
        
           <Button className="midbutton pb-3" variant="light">
             <BiCommentDetail style={{ color: "#6b6b6b" }} size="1.3rem" />{" "}
-          
+          Comment
           </Button>
           <Button className="midbutton pb-3" variant="light">
             <RiShareForwardLine style={{ color: "#6b6b6b" }} size="1.3rem" />{" "}
@@ -74,14 +75,12 @@ export default function NewFeedSection() {
           <Button className="midbutton pb-3" variant="light">
             <RiSendPlaneFill style={{ color: "#6b6b6b" }} size="1.3rem" /> Send
           </Button>
-
-
         </div>
  <div>      
     <Form>
   <Form.Group controlId="formGroupEmail">
    
-    <Form.Control type="text" placeholder="Add a Comment" />
+    <Form.Control type="text" placeholder="Add a Comment..." />
   </Form.Group>
   
 </Form></div>
@@ -89,7 +88,7 @@ export default function NewFeedSection() {
 
       </Container>
       </div>
-   
+     
   )
 };
 

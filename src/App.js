@@ -4,7 +4,7 @@ import ProfileSkill from "./components/ProfileSkill";
 import Deshboard from "./components/hicards/DeshBoard";
 import FirstCard from "./components/hicards/FirstCard";
 import SecondCard from "./components/hicards/SecondCard";
-import NewFeedSection from "./components/NewFeedSection";
+import SinglePost from "./components/SinglePost";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SideBar from "./components/SideBar";
@@ -56,7 +56,7 @@ class App extends React.Component {
               <SideBar />
             </Col>
           </Row>
-          <NewFeedSection />
+          <SinglePost />
           <ProfileFooter />
         </div>
       </>
