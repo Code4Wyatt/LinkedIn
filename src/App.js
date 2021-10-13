@@ -11,6 +11,7 @@ import React from "react";
 import ProfilePage from "./components/ProfilePage";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Home from "./components/Homepage/Home";
+import LeftSideBar from "./components/Homepage/LeftSideBar";
 
 class App extends React.Component {
   state = {
@@ -26,7 +27,7 @@ class App extends React.Component {
       <>
        <div className="App">
           <ProfileNavbar />
-
+          <LeftSideBar />
           <Router>
             <Switch>
               <Route path="/home/:userId">
