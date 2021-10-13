@@ -91,7 +91,7 @@ export default function ProfileSkill() {
   </label></Button>
             </Col>
             <Col xs={6} md={4}>
-            <Button>Accounting <input type="checkbox" />
+            <Button >Accounting <input type="checkbox" />
     <span class="seatButton"></span></Button>
             </Col>
             <Col xs={6} md={4}>
