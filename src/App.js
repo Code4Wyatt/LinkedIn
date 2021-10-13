@@ -1,18 +1,15 @@
+
+   
 import ProfileNavbar from "./components/ProfileNavbar";
 import ProfileFooter from "./components/ProfileFooter";
-import ProfileSkill from "./components/ProfileSkill";
-import Deshboard from "./components/hicards/DeshBoard";
-import FirstCard from "./components/hicards/FirstCard";
-import SecondCard from "./components/hicards/SecondCard";
 
+import { Button, Form, Container } from "react-bootstrap";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import SideBar from "./components/SideBar";
-import { Row, Col, Button, Container } from "react-bootstrap";
-import ProfileJumbotron from "./components/ProfileJumbotron";
-import AddExperience from "./components/AddExperience";
+
 import React from "react";
-import ExperienceEducation from "./components/ExperienceEducation";
+import ProfilePage from "./components/ProfilePage";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 
 class App extends React.Component {
@@ -27,34 +24,54 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <div className="App">
+       <div className="App">
           <ProfileNavbar />
-          <Row>
-            <Col xs={12} md={8}>
-              <Container className="d-flex flex-column">
-                <ProfileJumbotron />
-                <FirstCard />
-                <SecondCard />
-                <Deshboard />
-                <ProfileSkill />
-            
-                <ExperienceEducation />
 
-                <Button onClick={this.showModal}>Add experience</Button>
+          <Router>
+            <Switch>
+            <Route path="/profile/:userId">
+                <ProfilePage />
+              </Route>
+              <Route path="/">
+                <Container className="loginContainer">
+                  <Form id="loginForm">
+                    <Form.Group controlId="formBasicEmail">
+                      <Form.Label>Name</Form.Label>
+                      <Form.Control />
+                    </Form.Group>
 
-                {this.state.showModal ? (
-                  <AddExperience
-                    closeModal={this.closeModal}
-                    showModal={this.state.showModal}
-                    handleSubmit={this.handleSubmit}
-                  />
-                ) : null}
-              </Container>
-            </Col>
-            <Col xs={12} md={4}>
-              <SideBar />
-            </Col>
-          </Row>
+                    <Form.Group controlId="formBasicPassword">
+                      <Form.Label>Password</Form.Label>
+                      <Form.Control
+                        type="text"
+                        onChange={(e) =>
+                          this.setState({ ourProfile: e.target.value })
+                        }
+                      />
+                    </Form.Group>
+                    <Link
+                      to={"/profile/" + this.state.ourProfile}
+                      className="btn btn-primary"
+                      style={{
+                        width: "100px",
+                        marginTop: "20px",
+                        color: "blue",
+                      }}
+                      onClick={(e) =>
+                        alert(
+                          `${this.state.ourProfile} profile is about to be shown`
+                        )
+                      }
+                    >
+                      Login
+                    </Link>
+                  </Form>
+                </Container>
+              </Route>
+              
+             
+            </Switch>
+          </Router>
           <ProfileFooter />
         </div>
       </>
