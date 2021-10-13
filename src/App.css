@@ -138,8 +138,8 @@ h2 {
 } */
 
 .card {
-  overflow: hidden;
-  max-height: 450px;
+  /*  overflow: hidden; */
+  max-height: 540px;
   border-bottom-left-radius: 2% !important;
   border-top-right-radius: 2% !important;
   border-top-left-radius: 2% !important;
