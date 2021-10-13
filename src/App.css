@@ -1,9 +1,6 @@
-
-#root{
-    background-color: rgb(248, 247, 246);
-    }
-
-
+#root {
+  background-color: rgb(248, 247, 246);
+}
 
 .App-logo {
   height: 40vmin;
@@ -39,7 +36,6 @@
     transform: rotate(360deg);
   }
 }
-
 
 .artdeco-button {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -119,8 +115,6 @@ h2 {
   background-color: white !important;
   /*  border-left: 1px solid rgb(233, 233, 233); */
 }
-.desh-header-main {
-}
 
 .creator-section {
   border-radius: 10px !important;
@@ -150,13 +144,11 @@ h2 {
   border-top-right-radius: 2% !important;
   border-top-left-radius: 2% !important;
   border-bottom-right-radius: 2% !important;
-
 }
 
 .profile-container {
-  margin-bottom: 200px !important;
+  /*  margin-bottom: 20px !important; */
 }
-
 
 .profile-banner {
   position: relative;
@@ -164,7 +156,6 @@ h2 {
   top: -30px;
   height: 200px;
   object-fit: cover;
-  
 }
 
 .profile-picture {
@@ -181,7 +172,6 @@ h2 {
   text-align: start;
   position: relative;
   top: -120px;
-  
 }
 
 .experiences-img {
@@ -199,7 +189,6 @@ h2 {
   z-index: 2;
   position: relative;
   right: 15px;
-
 }
 
 .mutual-connections {
@@ -221,7 +210,7 @@ h2 {
 .connections-title {
   font-weight: lighter !important;
   font-size: 15px !important;
-   color: grey;
+  color: grey;
 }
 
 .connections-amount {
@@ -244,19 +233,16 @@ h2 {
 Button {
   border-bottom-left-radius: 50px !important;
   border-top-right-radius: 50px !important;
-  border-top-left-radius: 50px!important;
-  border-bottom-right-radius:50px !important;
+  border-top-left-radius: 50px !important;
+  border-bottom-right-radius: 50px !important;
   margin-right: 10px !important;
 }
 
-
 .App {
   background-color: rgb(223, 221, 221);
-  
 }
 
 .sideBarRow {
-
   border-radius: 10px;
   border-color: grey;
   font-weight: 400;
@@ -266,14 +252,12 @@ Button {
 }
 
 .sideBarList {
-  
   vertical-align: middle;
 }
 
 .sideBarCon {
   display: flex;
   flex-direction: column;
-  
 }
 
 .jobImg {
@@ -281,21 +265,18 @@ Button {
 }
 
 .sideBarPeople {
-
   display: flex;
   flex-direction: column;
 }
 
 .peopleImg {
-
   border-radius: 80px;
 }
 
 .sideImgCol {
-
   border-radius: 80px;
   padding: 0;
-    align-self: center;
+  align-self: center;
   justify-content: center;
 }
 
@@ -307,7 +288,6 @@ Button {
   left: 10px;
   margin-right: 20px;
 }
-
 
 .btns {
   width: 100px;
@@ -322,11 +302,10 @@ Button {
   z-index: 2;
 }
 
- .workFormLabel {
-
+.workFormLabel {
   margin-top: 20px;
 }
 
 .invLabel {
   color: white;
-} 
+}

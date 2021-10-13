@@ -72,12 +72,12 @@ class ProfileJumbotron extends React.Component {
     return (
       <Container className="profile-container">
         <Row>
-          <Col>
-            <Card style={{ width: "50rem" }}>
+          <Col style={{ display: "flex", justifyContent: "end" }}>
+            <Card>
               <Card.Body>
                 <div className="profile-banner-container">
                   <img
-                    className="profile-banner"
+                    className="profile-banner img-fluid w-100"
                     src="./assets/profilebanner.png"
                   />
                 </div>
