@@ -1,7 +1,15 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import AddExperience from "../AddExperience";
 
 class PostOnFeed extends React.Component {
+    state = {
+        showModal: false,
+      };
+    
+      showModal = () => this.setState({ showModal: true });
+      closeModal = () => this.setState({ showModal: false });
+
   render() {
     return (
       <>
@@ -33,7 +41,14 @@ class PostOnFeed extends React.Component {
                 </svg>
               </Col>
               <Col xs={10}>
-                <Button id="postModalBtn">Start a post</Button>
+                <Button variant="light" id="postModalBtn" onClick={this.showModal}>Start a post</Button>
+                {this.state.showModal ? (
+              <AddExperience
+                closeModal={this.closeModal}
+                showModal={this.state.showModal}
+                handleSubmit={this.handleSubmit}
+              />
+            ) : null} 
               </Col>
             </Row>
             <Row
