@@ -140,10 +140,7 @@ h2 {
 .card {
   /*  overflow: hidden; */
   max-height: 540px;
-  border-bottom-left-radius: 2% !important;
-  border-top-right-radius: 2% !important;
-  border-top-left-radius: 2% !important;
-  border-bottom-right-radius: 2% !important;
+  border-radius: 15px;
 }
 
 .profile-container {
@@ -311,16 +308,13 @@ Button {
 }
 
 .loginContainer {
-
   height: 640px;
   position: relative;
 }
 
 #loginForm {
-
-width: 300px;
-position: absolute;
-left: 40%;
-top: 30%;
-
+  width: 300px;
+  position: absolute;
+  left: 40%;
+  top: 30%;
 }

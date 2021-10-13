@@ -1,4 +1,3 @@
-
 import React from "react";
 import {
   Container,
@@ -19,36 +18,33 @@ class ProfileJumbotron extends React.Component {
       data: [],
       error: false,
       toggle: false,
-      
     };
   }
-   idHeader = () => {
-    const claudiaToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTYzZmM1OWE4OTBjYzAwMTVjZjA3ZWQiLCJpYXQiOjE2MzM5NDI2MTgsImV4cCI6MTYzNTE1MjIxOH0.Aut8mQArR8IfI07aKxRS8oT9D5L-g1Uz5d36Mdj55L0"
-    const paulToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTY0MWYwMWE4OTBjYzAwMTVjZjA3ZWYiLCJpYXQiOjE2MzM5NTE0ODksImV4cCI6MTYzNTE2MTA4OX0.vx77x7lAtcX0LJjTGsp1uSzKGgE5K7MlKFsN70cMX5Q"
-    const claudiaId = "6163fc59a890cc0015cf07ed"
-   }
-  
+  idHeader = () => {
+    const claudiaToken =
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTYzZmM1OWE4OTBjYzAwMTVjZjA3ZWQiLCJpYXQiOjE2MzM5NDI2MTgsImV4cCI6MTYzNTE1MjIxOH0.Aut8mQArR8IfI07aKxRS8oT9D5L-g1Uz5d36Mdj55L0";
+    const paulToken =
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTY0MWYwMWE4OTBjYzAwMTVjZjA3ZWYiLCJpYXQiOjE2MzM5NTE0ODksImV4cCI6MTYzNTE2MTA4OX0.vx77x7lAtcX0LJjTGsp1uSzKGgE5K7MlKFsN70cMX5Q";
+    const claudiaId = "6163fc59a890cc0015cf07ed";
+  };
+
   async fetchProfiles() {
-    
     try {
-     
-    
       const response = await fetch(
         `https://striveschool-api.herokuapp.com/api/profile/${this.props.userId}`,
-        {headers: {
-          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTYzZmM1OWE4OTBjYzAwMTVjZjA3ZWQiLCJpYXQiOjE2MzM5NDI2MTgsImV4cCI6MTYzNTE1MjIxOH0.Aut8mQArR8IfI07aKxRS8oT9D5L-g1Uz5d36Mdj55L0',
-          'Content-type': 'application/json', 
-         
-            
+        {
+          headers: {
+            Authorization:
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTYzZmM1OWE4OTBjYzAwMTVjZjA3ZWQiLCJpYXQiOjE2MzM5NDI2MTgsImV4cCI6MTYzNTE1MjIxOH0.Aut8mQArR8IfI07aKxRS8oT9D5L-g1Uz5d36Mdj55L0",
+            "Content-type": "application/json",
+          },
         }
-      }
       );
-      console.log(response)
+      console.log(response);
       if (response.ok) {
-       const data = await response.json(); 
+        const data = await response.json();
         this.setState({ data: data });
-        console.log("after the fetch", data); 
-      
+        console.log("after the fetch", data);
       }
     } catch (error) {
       console.log(error.message);
@@ -56,14 +52,10 @@ class ProfileJumbotron extends React.Component {
     }
   }
 
-
-
   toggleSelected = (e) => e.preventDefault;
 
   async componentDidMount() {
-    
-     
-     this.fetchProfiles();
+    this.fetchProfiles();
     /* try {
       const response = await fetch(
         "https://striveschool-api.herokuapp.com/api/profile/me",
@@ -86,22 +78,25 @@ class ProfileJumbotron extends React.Component {
   }
 
   render() {
-    
     return (
       <Container className="profile-container">
         <Row>
           <Col>
-            <Card style={{ width: "50rem" }}>
+            <Card>
               <Card.Body>
                 <div className="profile-banner-container">
                   <img
                     className="profile-banner"
-                    src="./assets/profilebanner.png"
+                    src="/assets/profilebanner.png"
                     alt=""
                   />
                 </div>
 
-                <img className="profile-picture" src= {this.state.data.image} alt="" />
+                <img
+                  className="profile-picture"
+                  src={this.state.data.image}
+                  alt=""
+                />
                 <div className="container">
                   <div className="row">
                     <div className="col-xs-8">
@@ -127,7 +122,7 @@ class ProfileJumbotron extends React.Component {
                             className="experiences-img"
                             src="./assets/striveschool.jfif"
                             alt=""
-                           />
+                          />
                           Strive School
                         </div>
                         <div>
