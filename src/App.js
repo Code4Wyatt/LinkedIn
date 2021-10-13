@@ -2,11 +2,9 @@
    
 import ProfileNavbar from "./components/ProfileNavbar";
 import ProfileFooter from "./components/ProfileFooter";
-
 import { Button, Form, Container } from "react-bootstrap";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import React from "react";
 import ProfilePage from "./components/ProfilePage";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
@@ -27,7 +25,6 @@ class App extends React.Component {
       <>
        <div className="App">
           <ProfileNavbar />
-          <LeftSideBar />
           <Router>
             <Switch>
               <Route path="/home/:userId">
