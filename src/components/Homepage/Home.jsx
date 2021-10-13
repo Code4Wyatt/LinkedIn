@@ -1,6 +1,6 @@
 import React from "react"
 import {Container, Row, Col} from 'react-bootstrap'
-import PostOnFeed from "../PostOnFeed"
+import PostOnFeed from "./PostOnFeed"
 import { withRouter } from "react-router";
 
 class Home extends React.Component {
