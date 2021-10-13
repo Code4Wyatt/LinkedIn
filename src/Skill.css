@@ -19,8 +19,9 @@ margin-top: 20%;
  #pen-icon:hover{
             background-color: rgb(207, 202, 202); 
             border-radius: 10px;
-            color:rgb(104, 100, 100); 
-         
-         
-           
+            color:rgb(104, 100, 100);       
      }
+     #add-skill-button Button{
+        background-color: #1f6422; /* Green */
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }

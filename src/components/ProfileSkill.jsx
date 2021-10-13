@@ -1,7 +1,7 @@
 import React from "react";
 import "../Skill.css";
 import { BsPencil } from "react-icons/bs";
-import { Card, Button,Modal} from "react-bootstrap";
+import { Card, Button,Modal,Col,Row,Container} from "react-bootstrap";
 import { useState, useEffect } from "react";
 
 
@@ -79,11 +79,46 @@ export default function ProfileSkill() {
         <span id="editprofilediv">
           <BsPencil className="editprofileicon"onClick={handleShow} />
         </span>
-        <Modal show={show} onHide={handleClose}>
+        <Modal show={show} onHide={handleClose} >
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Add Skills</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <hr/>
+        <h6 style={{ marginLeft:'10px'}}>Suggested skills based on your profile</h6>
+        <Modal.Body> <Container>
+          <Row id ="add-skill-button">
+    
+            <Col xs={6} md={4}>
+              <Button>Networking<input type="checkbox" />
+    <span class="seatButton"></span></Button>
+            </Col>
+            <Col xs={6} md={4}>
+            <Button>Frontend<input type="checkbox" />
+    <span class="seatButton"></span></Button>
+            </Col>
+            <Col xs={6} md={4}>
+            <Button>Engineering<input type="checkbox" />
+    <span class="seatButton"></span></Button>
+            </Col>
+          </Row>
+
+          <Row className="row mt-10" id ="add-skill-button"style={{ marginTop:'5px'}}>
+            <Col xs={6} md={4}>
+            <Button >Managment <label>
+    <input type="checkbox" />
+    <span class="seatButton"></span>
+  </label></Button>
+            </Col>
+            <Col xs={6} md={4}>
+            <Button>Accounting<input type="checkbox" />
+    <span class="seatButton"></span></Button>
+            </Col>
+            <Col xs={6} md={4}>
+            <Button>Scrum<input type="checkbox" />
+    <span class="seatButton"></span></Button>
+            </Col>
+          </Row>
+        </Container></Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
