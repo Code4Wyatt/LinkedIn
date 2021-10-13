@@ -1,10 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card } from "react-bootstrap";
 
 class ExperienceEducation extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      data: [],
+    };
+  }
+
+  async componentDidMount() {
+    try {
+      const response = await fetch(
+        "https://striveschool-api.herokuapp.com/api/profile/5d925e677360c41e0046d1f5/experiences",
+        {
+          headers: new Headers({
+            Authorization:
+              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTY0MWYwMWE4OTBjYzAwMTVjZjA3ZWYiLCJpYXQiOjE2MzM5NTE0ODksImV4cCI6MTYzNTE2MTA4OX0.vx77x7lAtcX0LJjTGsp1uSzKGgE5K7MlKFsN70cMX5Q",
+          }),
+        }
+      );
+      if (response.ok) {
+        const data = await response.json();
+        this.setState({data})
+        console.log("experiences data:", data)
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
   render() {
     return (
-      <Card className="experience-card" style={{ width: "50rem"}}>
+      <Card className="experience-card" style={{ width: "50rem" }}>
         <div className="experience-section">
           <h5>Experience</h5>
           <Card.Body>
@@ -37,10 +66,7 @@ class ExperienceEducation extends React.Component {
           <Card.Body>
             <div className="d-flex">
               <div className="experience-images-section">
-                <img
-                  className="experience-images"
-                  src="./assets/jagland.png"
-                />
+                <img className="experience-images" src="./assets/jagland.png" />
               </div>
               <div className="experience-content-section">
                 <div className="experience-titles-section-education ml-2">
@@ -51,11 +77,12 @@ class ExperienceEducation extends React.Component {
                     <h8>January 2018 - July 2021</h8>
                   </a>
                 </div>
-                            <div className="experience-content-section ml-2">
-                                <ul><li>Managed client accounts</li>
-                                <li>Provided quotes and processed sales</li>
-                                <li>Prospected new clients</li></ul>
-                  
+                <div className="experience-content-section ml-2">
+                  <ul>
+                    <li>Managed client accounts</li>
+                    <li>Provided quotes and processed sales</li>
+                    <li>Prospected new clients</li>
+                  </ul>
                 </div>
                 <hr />
               </div>
@@ -81,8 +108,6 @@ class ExperienceEducation extends React.Component {
                     <h8>June 2021 - Present</h8>
                   </a>
                 </div>
-                
-               
               </div>
             </div>
           </Card.Body>

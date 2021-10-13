@@ -115,8 +115,6 @@ h2 {
   background-color: white !important;
   /*  border-left: 1px solid rgb(233, 233, 233); */
 }
-.desh-header-main {
-}
 
 .creator-section {
   border-radius: 10px !important;
@@ -155,7 +153,7 @@ h2 {
 .profile-banner {
   position: relative;
   left: -20px;
-  top: -20px;
+  top: -30px;
   height: 200px;
   object-fit: cover;
 }
@@ -163,7 +161,7 @@ h2 {
 .profile-picture {
   border-radius: 95%;
   height: 150px;
-  z-index: 1;
+  z-index: 2;
   position: relative;
   top: -125px;
   right: 290px;
@@ -302,4 +300,12 @@ Button {
 .dropdown {
   position: relative;
   z-index: 2;
+}
+
+.workFormLabel {
+  margin-top: 20px;
+}
+
+.invLabel {
+  color: white;
 }

@@ -1,8 +1,15 @@
 import React from "react";
 import "../Skill.css";
 import { BsPencil } from "react-icons/bs";
-import { Card, Button } from "react-bootstrap";
+import { Card, Button,Modal,Col,Row,Container} from "react-bootstrap";
+import { useState, useEffect } from "react";
+
+
 export default function ProfileSkill() {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
   return (
     <div className="contaier ml-9" id="ProfileSkill">
       <div className="row">
@@ -14,7 +21,7 @@ export default function ProfileSkill() {
               </h5>
               <Button
                 className="btn ml-4"
-                style={{ color: "rgb(79, 113, 206)", fontWeight: "700" }}
+                style={{ color: "rgb(79, 113, 206)", fontWeight: "700" ,background:'white'}}
               >
                 Take Skill quiz
               </Button>
@@ -49,25 +56,74 @@ export default function ProfileSkill() {
         <div className="col-6 mt-4 mr-6">
           <div className="row">
             <div className="col-3 " id="add-new">
-              <a
-                href=""
-                style={{ color: "rgb(61, 60, 60)", textdecoration: "none" }}
-              >
-                Add a new skill
-              </a>
-            </div>
-            <div className="col-2">
-              <a
-                href=""
-                id="pen-icon"
-                style={{ color: "rgb(61, 60, 60)", textdecoration: "none" }}
-              >
-                <BsPencil />
-              </a>
-            </div>
-          </div>
+            <h6 variant="primary" onClick={handleShow}>
+            Add a new skill
+      </h6>
+
+      <Modal show={show} onHide={handleClose} >
+        <Modal.Header closeButton>
+          <Modal.Title>Add Skills</Modal.Title>
+        </Modal.Header>
+        <hr/>
+        <h6 style={{ marginLeft:'10px'}}>Suggested skills based on your profile</h6>
+        <Modal.Body> <Container>
+          <Row id ="add-skill-button">
+    
+            <Col xs={6} md={4}>
+              <Button>Networking <input type="checkbox" />
+    <span class="seatButton"></span></Button>
+            </Col>
+            <Col xs={6} md={4}>
+            <Button>Frontend <input type="checkbox" />
+    <span class="seatButton"></span></Button>
+            </Col>
+            <Col xs={6} md={4}>
+            <Button>Engineering <input type="checkbox" />
+    <span class="seatButton"></span></Button>
+            </Col>
+          </Row>
+
+          <Row className="row mt-10" id ="add-skill-button"style={{ marginTop:'5px'}}>
+            <Col xs={6} md={4}>
+            <Button >Managment <label>
+    <input type="checkbox" />
+    <span class="seatButton"></span>
+  </label></Button>
+            </Col>
+            <Col xs={6} md={4}>
+            <Button>Accounting <input type="checkbox" />
+    <span class="seatButton"></span></Button>
+            </Col>
+            <Col xs={6} md={4}>
+            <Button>Scrum <input type="checkbox" />
+    <span class="seatButton"></span></Button>
+            </Col>
+          </Row>
+        </Container></Modal.Body>
+        <div id="myDIV" class="header">
+  
+  <input type="text" id="myInput" placeholder="Skill..."/>
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+        <Modal.Footer>
+         
+          <Button variant="primary"style={{background:'blue'}}  onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      </div>
+      <div className="col-2">
+        <span id="editprofilediv">
+          <BsPencil className="editprofileicon" />
+        </span>
+        
+        
         </div>
       </div>
     </div>
+    </div>
+      </div>
+   
   );
 }

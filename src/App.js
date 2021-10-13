@@ -4,6 +4,7 @@ import ProfileSkill from "./components/ProfileSkill";
 import Deshboard from "./components/hicards/DeshBoard";
 import FirstCard from "./components/hicards/FirstCard";
 import SecondCard from "./components/hicards/SecondCard";
+
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SideBar from "./components/SideBar";
@@ -13,13 +14,16 @@ import AddExperience from "./components/AddExperience";
 import React from "react";
 import ExperienceEducation from "./components/ExperienceEducation";
 
+
 class App extends React.Component {
   state = {
     showModal: false,
+  
   };
 
   showModal = () => this.setState({ showModal: true });
   closeModal = () => this.setState({ showModal: false });
+
 
   render() {
     return (
@@ -34,6 +38,7 @@ class App extends React.Component {
                 <SecondCard />
                 <Deshboard />
                 <ProfileSkill />
+            
                 <ExperienceEducation />
 
                 <Button onClick={this.showModal}>Add experience</Button>
