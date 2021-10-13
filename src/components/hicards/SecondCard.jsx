@@ -2,7 +2,7 @@ import { Card, Button, Row, Col, Container } from "react-bootstrap";
 
 const SecondCard = () => {
   return (
-    <Container>
+    <Container style={{ marginBottom: "15px" }}>
       <Card>
         <Card.Body>
           <div className="header-div">

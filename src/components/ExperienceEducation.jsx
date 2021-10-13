@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Card } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 
 class ExperienceEducation extends React.Component {
   constructor() {
@@ -11,7 +11,7 @@ class ExperienceEducation extends React.Component {
   }
 
   async componentDidMount() {
-    let id = '61641f01a890cc0015cf07ef'
+    let id = "61641f01a890cc0015cf07ef";
     try {
       const response = await fetch(
         `https://striveschool-api.herokuapp.com/api/profile/${id}/experiences`,
@@ -24,8 +24,8 @@ class ExperienceEducation extends React.Component {
       );
       if (response.ok) {
         const data = await response.json();
-        this.setState({data})
-        console.log("experiences data:", data)
+        this.setState({ data });
+        console.log("experiences data:", data);
       }
     } catch (error) {
       console.log(error.message);
@@ -34,10 +34,13 @@ class ExperienceEducation extends React.Component {
 
   render() {
     return (
-      <Card className="experience-card" style={{ width: "50rem" }}>
-        <div className="experience-section">
-          <h5>Experience</h5>
+      <Container>
+        <Card className="experience-card">
           <Card.Body>
+            <div style={{ paddingLeft: "12px" }}>
+              <h5>Experience</h5>
+            </div>
+
             <div className="d-flex">
               <div className="experience-images-section">
                 <img
@@ -89,10 +92,11 @@ class ExperienceEducation extends React.Component {
               </div>
             </div>
           </Card.Body>
-        </div>
-        <div className="education-section">
-          <h5>Education</h5>
+
           <Card.Body>
+            <div style={{ paddingLeft: "12px" }}>
+              <h5>Education</h5>
+            </div>
             <div className="d-flex">
               <div className="experience-images-section ">
                 <img
@@ -112,8 +116,8 @@ class ExperienceEducation extends React.Component {
               </div>
             </div>
           </Card.Body>
-        </div>
-      </Card>
+        </Card>
+      </Container>
     );
   }
 }

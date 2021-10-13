@@ -86,7 +86,7 @@ class ProfileJumbotron extends React.Component {
               <Card.Body>
                 <div className="profile-banner-container">
                   <img
-                    className="profile-banner"
+                    className="profile-banner img-fluid "
                     src="/assets/profilebanner.png"
                     alt=""
                   />

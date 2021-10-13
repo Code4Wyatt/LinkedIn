@@ -1,31 +1,32 @@
 #ProfileSkill {
-margin-top: 20%;
+  margin-top: 15px;
 }
 .btn {
-    background-color:white;
-    border-radius: 17px;
-    width:150px;
-    transition-duration: 0.7s;
+  background-color: white;
+  border-radius: 17px;
+  width: 150px;
+  transition-duration: 0.7s;
 }
 
-#add-new{
- font-size: 20px;
+#add-new {
+  font-size: 20px;
+}
+#add-new:hover {
+  background-color: rgb(245, 236, 236);
+}
 
- }
-#add-new:hover{
- background-color: rgb(245, 236, 236);
- }
-
- #pen-icon:hover{
-            background-color: rgb(207, 202, 202); 
-            border-radius: 10px;
-            color:rgb(104, 100, 100);       
-     }
- #add-skill-button Button{
-        background-color: #1f6422; /* Green */
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-        }
-.addBtn:hover{
-           width: 50px;
-            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-     }
+#pen-icon:hover {
+  background-color: rgb(207, 202, 202);
+  border-radius: 10px;
+  color: rgb(104, 100, 100);
+}
+#add-skill-button Button {
+  background-color: #1f6422; /* Green */
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.addBtn:hover {
+  width: 50px;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
