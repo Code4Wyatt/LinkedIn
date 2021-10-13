@@ -140,14 +140,12 @@ h2 {
 } */
 
 .card {
-  /*  overflow: hidden; */
+
   max-height: 540px;
   border-radius: 15px;
 }
 
-.profile-container {
-  /*  margin-bottom: 20px !important; */
-}
+
 
 .profile-banner {
   position: relative;
