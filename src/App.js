@@ -17,12 +17,11 @@ import ExperienceEducation from "./components/ExperienceEducation";
 
 class App extends React.Component {
   state = {
-    showModal: false,
-  
+    ourProfile: "",
   };
 
-  showModal = () => this.setState({ showModal: true });
-  closeModal = () => this.setState({ showModal: false });
+  handleSubmit = (e) => this.setState({ ourProfile: e.target.value });
+
 
 
   render() {

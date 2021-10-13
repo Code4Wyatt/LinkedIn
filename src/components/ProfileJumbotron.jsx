@@ -33,9 +33,10 @@ class ProfileJumbotron extends React.Component {
         }
       );
       if (response.ok) {
-        const data = await response.json();
+       const data = await response.json(); 
         this.setState({ error: false, data });
-        console.log(data);
+        console.log("after the fetch", data); 
+      
       }
     } catch (error) {
       console.log(error.message);
