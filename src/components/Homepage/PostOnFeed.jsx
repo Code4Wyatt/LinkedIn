@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import AddExperience from "../AddExperience";
+import AddPost from './AddPost'
 
 class PostOnFeed extends React.Component {
     state = {
@@ -44,7 +44,7 @@ class PostOnFeed extends React.Component {
               <Col xs={10}>
                 <Button variant="light" id="postModalBtn" onClick={this.showModal}>Start a post</Button>
                 {this.state.showModal ? (
-              <AddExperience
+              <AddPost
                 closeModal={this.closeModal}
                 showModal={this.state.showModal}
                 handleSubmit={this.handleSubmit}
