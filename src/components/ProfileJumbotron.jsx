@@ -57,7 +57,7 @@ function ProfileJumbotron(props) {
 
    
   }, [data])
-  /* toggleShowModel = () => ({ showModal: e.target.value }); */
+
 
   
     return (
