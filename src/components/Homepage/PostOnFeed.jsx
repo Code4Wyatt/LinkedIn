@@ -5,13 +5,14 @@ import AddPost from './AddPost'
 class PostOnFeed extends React.Component {
     state = {
         showModal: false,
+        profile: ""
       };
     
       showModal = () => this.setState({ showModal: true });
       closeModal = () => this.setState({ showModal: false });
 
   render() {
-    console.log("post on feed", this.props.userId)
+    console.log("post on feed", this.props.profile)
     return (
       <>
         <Container>
@@ -50,7 +51,7 @@ class PostOnFeed extends React.Component {
                 closeModal={this.closeModal}
                 showModal={this.state.showModal}
                 handleSubmit={this.handleSubmit}
-                userId={this.props.userId}
+                profile={this.props.profile}
               />
             ) : null} 
               </Col>

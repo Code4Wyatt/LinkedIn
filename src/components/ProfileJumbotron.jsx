@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {
   Container,
   Row,
@@ -11,14 +11,18 @@ import {
 } from "react-bootstrap";
 import UploadPic from "./unploadPicture/UploadPic";
 
-function ProfileJumbotron(props) {
-  const [data, setData] = useState([]);
-  const [error, setError] = useState(false);
-  const [toggle, setToggle] = useState(false);
-  const [showModal, setshowModal] = useState(false);
-  
-  
-  const idHeader = () => {
+class ProfileJumbotron extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      data: [],
+      error: false,
+      toggle: false,
+      showModal: false,
+    };
+  }
+  idHeader = () => {
     const claudiaToken =
       "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTYzZmM1OWE4OTBjYzAwMTVjZjA3ZWQiLCJpYXQiOjE2MzM5NDI2MTgsImV4cCI6MTYzNTE1MjIxOH0.Aut8mQArR8IfI07aKxRS8oT9D5L-g1Uz5d36Mdj55L0";
     const paulToken =
@@ -26,10 +30,10 @@ function ProfileJumbotron(props) {
     const claudiaId = "6163fc59a890cc0015cf07ed";
   };
 
-  const fetchProfiles = async () => {
+  async fetchProfiles() {
     try {
       const response = await fetch(
-        `https://striveschool-api.herokuapp.com/api/profile/${props.userId}`,
+        `https://striveschool-api.herokuapp.com/api/profile/${this.props.userId}`,
         {
           headers: {
             Authorization:
@@ -41,25 +45,43 @@ function ProfileJumbotron(props) {
       console.log(response);
       if (response.ok) {
         const data = await response.json();
-        setData( data );
+        this.setState({ data: data });
         console.log("after the fetch", data);
       }
     } catch (error) {
       console.log(error.message);
-      setError({ error: true });
+      this.setState({ error: true });
     }
   }
 
-  const toggleSelected = (e) => e.preventDefault;
+  toggleSelected = (e) => e.preventDefault;
 
-  useEffect(() => {
-    fetchProfiles();
+  async componentDidMount() {
+    this.fetchProfiles();
 
-   
-  }, [data])
+    /* try {
+      const response = await fetch(
+        "https://striveschool-api.herokuapp.com/api/profile/me",
+        {
+          headers: new Headers({
+            Authorization:
+              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTY0MWYwMWE4OTBjYzAwMTVjZjA3ZWYiLCJpYXQiOjE2MzM5NTE0ODksImV4cCI6MTYzNTE2MTA4OX0.vx77x7lAtcX0LJjTGsp1uSzKGgE5K7MlKFsN70cMX5Q",
+          }),
+        }
+      );
+      if (response.ok) {
+        const data = await response.json();
+        this.setState({ error: false, data });
+        console.log(data);
+      }
+    } catch (error) {
+      console.log(error);
+      this.setState({ error: true });
+    } */
+  }
   /* toggleShowModel = () => ({ showModal: e.target.value }); */
 
-  
+  render() {
     return (
       <Container className="homeContainer">
         <Row style={{paddingBottom: '0'}}>
@@ -71,15 +93,15 @@ function ProfileJumbotron(props) {
              <img
               className=" profile-picture"
               alt=""
-              src={data.image}
+              src={this.state.data.image}
             
             />
           </Row>
           <Row style={{padding: "15px", paddingBottom: '0', paddingTop: '0'}}>
           <div>
-          <p>{data.name} {data.surname}</p>
-          <p className="mb-2 text-muted"> {data.bio}</p>
-          <p className="text-muted"> {data.area}{" "}
+          <p>{this.state.data.name} {this.state.data.surname}</p>
+          <p className="mb-2 text-muted"> {this.state.data.bio}</p>
+          <p className="text-muted"> {this.state.data.area}{" "}
                           <a className="contact-info-link" href="#">
                             Contact Info
                           </a></p>
@@ -97,7 +119,6 @@ function ProfileJumbotron(props) {
                           Strive School
                         </div>
                       </div>
-                      
                     </div>
             </Row>
             <Row style={{padding:'15px',  paddingBottom: '0'}}> 
@@ -225,8 +246,12 @@ function ProfileJumbotron(props) {
                   </DropdownButton>
                 {/* </div> */}
             </Row>
+
+              
+              
       </Container>
     );
   }
+}
 
 export default ProfileJumbotron;

@@ -1,17 +1,17 @@
 import React from "react";
-import { Form, Modal, Button } from "react-bootstrap";
+import { Form, Modal, Button, Row, Col } from "react-bootstrap";
 
 class AddPost extends React.Component {
   state = {
     text: "",
+    
   };
   han;
+
 
   handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log(this.state.workExperience);
-    let id = "6163fc59a890cc0015cf07ed";
     try {
       let response = await fetch(
         `https://striveschool-api.herokuapp.com/api/posts/`,
@@ -42,7 +42,7 @@ class AddPost extends React.Component {
   }
 
   render() {
-    console.log(this.props.userId)
+    console.log("in add post", this.props.profile)
     return (
       <>
         <Modal
@@ -57,6 +57,19 @@ class AddPost extends React.Component {
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
+            <Row>
+              <Col xs={1}>
+                <img
+                alt=""
+                src=  {this.props.profile.image}
+                width={20}
+                width={20}
+               />
+              </Col>
+              <Col xs={5}>
+               <p className="d-inline-flex">{this.props.profile.name} {this.props.profile.surname}</p>
+              </Col>
+              </Row>
             <Form.Group controlId="exampleForm.ControlTextarea1">
               <Form.Label>Example textarea</Form.Label>
               <Form.Control

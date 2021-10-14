@@ -342,3 +342,10 @@ h2 {
   left: 40%;
   top: 30%;
 }
+
+.connect-btn {
+
+  color: white !important;
+  background-color: blue !important;
+  font-weight: bold;
+}
