@@ -74,7 +74,6 @@
   margin-top: 13px;
 }
 
-.card-body-left-sidebar {}
 
 span {
   display: block;
@@ -145,9 +144,7 @@ h2 {
   border-radius: 15px;
 }
 
-.profile-container {
-  /*  margin-bottom: 20px !important; */
-}
+
 
 .profile-banner {
   position: relative;
@@ -240,48 +237,14 @@ h2 {
 }
 
 
-.sideBarBanner {
-  position: relative;
-  bottom: 7px;
-  
-}
 
-.sideBarAvatar {
-  border-radius: 50% !important;
-  height: 60px;
-  width: 60px !important;
-  z-index: 1;
-  position: relative;
-  top: -45px;
-  right: -80px;
-  border: 3px solid white;
-}
-
-.leftSideBarTitles {
-  position: relative;
-  bottom: 60px;
-}
-
-.leftSideBarCard {
-  max-height: auto !important;
-}
-
-.leftSideBarCardBody {
-  height: 200px !important;
-}
-
-.leftSideBarButtonsSection {
-  position: relative;
-  bottom: 60px;
-}
-
-Button {
+/* Button {
   border-bottom-left-radius: 50px !important;
   border-top-right-radius: 50px !important;
   border-top-left-radius: 50px !important;
   border-bottom-right-radius: 50px !important;
   margin-right: 10px !important;
-}
+} */
 
 .App {
   background-color: rgb(223, 221, 221);
