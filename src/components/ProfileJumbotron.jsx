@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {
   Container,
   Row,
@@ -11,7 +11,7 @@ import {
 } from "react-bootstrap";
 import UploadPic from "./unploadPicture/UploadPic";
 
-function ProfileJumbotron() {
+function ProfileJumbotron(props) {
   const [data, setData] = useState([]);
   const [error, setError] = useState(false);
   const [toggle, setToggle] = useState(false);
@@ -29,7 +29,7 @@ function ProfileJumbotron() {
   const fetchProfiles = async () => {
     try {
       const response = await fetch(
-        `https://striveschool-api.herokuapp.com/api/profile/${this.props.userId}`,
+        `https://striveschool-api.herokuapp.com/api/profile/${props.userId}`,
         {
           headers: {
             Authorization:
@@ -41,40 +41,22 @@ function ProfileJumbotron() {
       console.log(response);
       if (response.ok) {
         const data = await response.json();
-        this.setState({ data: data });
+        setData( data );
         console.log("after the fetch", data);
       }
     } catch (error) {
       console.log(error.message);
-      this.setState({ error: true });
+      setError({ error: true });
     }
   }
 
   const toggleSelected = (e) => e.preventDefault;
 
-  const componentDidMount = async () => {
+  useEffect(() => {
     fetchProfiles();
 
-    /* try {
-      const response = await fetch(
-        "https://striveschool-api.herokuapp.com/api/profile/me",
-        {
-          headers: new Headers({
-            Authorization:
-              "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTY0MWYwMWE4OTBjYzAwMTVjZjA3ZWYiLCJpYXQiOjE2MzM5NTE0ODksImV4cCI6MTYzNTE2MTA4OX0.vx77x7lAtcX0LJjTGsp1uSzKGgE5K7MlKFsN70cMX5Q",
-          }),
-        }
-      );
-      if (response.ok) {
-        const data = await response.json();
-        this.setState({ error: false, data });
-        console.log(data);
-      }
-    } catch (error) {
-      console.log(error);
-      this.setState({ error: true });
-    } */
-  }
+   
+  }, [data])
   /* toggleShowModel = () => ({ showModal: e.target.value }); */
 
   
@@ -89,15 +71,15 @@ function ProfileJumbotron() {
              <img
               className=" profile-picture"
               alt=""
-              src={this.state.data.image}
+              src={data.image}
             
             />
           </Row>
           <Row style={{padding: "15px", paddingBottom: '0', paddingTop: '0'}}>
           <div>
-          <p>{this.state.data.name} {this.state.data.surname}</p>
-          <p className="mb-2 text-muted"> {this.state.data.bio}</p>
-          <p className="text-muted"> {this.state.data.area}{" "}
+          <p>{data.name} {data.surname}</p>
+          <p className="mb-2 text-muted"> {data.bio}</p>
+          <p className="text-muted"> {data.area}{" "}
                           <a className="contact-info-link" href="#">
                             Contact Info
                           </a></p>
