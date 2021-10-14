@@ -53,7 +53,7 @@ function ProfileJumbotron(props) {
 
   useEffect(() => {
     fetchProfiles();
-  }, [data]);
+  }, []);
 
   return (
     <>
