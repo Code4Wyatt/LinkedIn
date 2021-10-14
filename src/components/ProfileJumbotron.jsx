@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   Container,
   Row,
@@ -11,18 +11,14 @@ import {
 } from "react-bootstrap";
 import UploadPic from "./unploadPicture/UploadPic";
 
-class ProfileJumbotron extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      data: [],
-      error: false,
-      toggle: false,
-      showModal: false,
-    };
-  }
-  idHeader = () => {
+function ProfileJumbotron() {
+  const [data, setData] = useState([]);
+  const [error, setError] = useState(false);
+  const [toggle, setToggle] = useState(false);
+  const [showModal, setshowModal] = useState(false);
+  
+  
+  const idHeader = () => {
     const claudiaToken =
       "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTYzZmM1OWE4OTBjYzAwMTVjZjA3ZWQiLCJpYXQiOjE2MzM5NDI2MTgsImV4cCI6MTYzNTE1MjIxOH0.Aut8mQArR8IfI07aKxRS8oT9D5L-g1Uz5d36Mdj55L0";
     const paulToken =
@@ -30,7 +26,7 @@ class ProfileJumbotron extends React.Component {
     const claudiaId = "6163fc59a890cc0015cf07ed";
   };
 
-  async fetchProfiles() {
+  const fetchProfiles = async () => {
     try {
       const response = await fetch(
         `https://striveschool-api.herokuapp.com/api/profile/${this.props.userId}`,
@@ -54,10 +50,10 @@ class ProfileJumbotron extends React.Component {
     }
   }
 
-  toggleSelected = (e) => e.preventDefault;
+  const toggleSelected = (e) => e.preventDefault;
 
-  async componentDidMount() {
-    this.fetchProfiles();
+  const componentDidMount = async () => {
+    fetchProfiles();
 
     /* try {
       const response = await fetch(
@@ -81,7 +77,7 @@ class ProfileJumbotron extends React.Component {
   }
   /* toggleShowModel = () => ({ showModal: e.target.value }); */
 
-  render() {
+  
     return (
       <Container className="homeContainer">
         <Row style={{paddingBottom: '0'}}>
@@ -247,12 +243,8 @@ class ProfileJumbotron extends React.Component {
                   </DropdownButton>
                 {/* </div> */}
             </Row>
-
-              
-              
       </Container>
     );
   }
-}
 
 export default ProfileJumbotron;
