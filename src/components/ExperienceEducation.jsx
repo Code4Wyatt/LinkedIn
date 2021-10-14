@@ -11,10 +11,10 @@ class ExperienceEducation extends React.Component {
   }
 
   async componentDidMount(props) {
-    let id = "61641f01a890cc0015cf07ef";
+   
     try {
       const response = await fetch(
-        `https://striveschool-api.herokuapp.com/api/profile/${this.props.userId}/experiences`,
+        `https://striveschool-api.herokuapp.com/api/profile/${this.state.props.userId}/experiences`,
         {
           headers: new Headers({
             Authorization:
@@ -36,11 +36,13 @@ class ExperienceEducation extends React.Component {
     return (
       <Container>
         <Card className="experience-card">
+          {
+
+          }
           <Card.Body>
             <div style={{ paddingLeft: "12px" }}>
               <h5>Experience</h5>
             </div>
-
             <div className="d-flex">
               <div className="experience-images-section">
                 <img
@@ -92,7 +94,6 @@ class ExperienceEducation extends React.Component {
               </div>
             </div>
           </Card.Body>
-
           <Card.Body>
             <div style={{ paddingLeft: "12px" }}>
               <h5>Education</h5>
