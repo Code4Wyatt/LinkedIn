@@ -81,44 +81,33 @@ class ProfileJumbotron extends React.Component {
 
   render() {
     return (
-      <Container className="profile-container">
-        <Row>
-          <Col>
-            <Card>
-              <Card.Body>
-                <div className="profile-banner-container">
-                  <img
-                    className="profile-banner img-fluid "
-                    src="/assets/profilebanner.png"
-                    alt=""
-                  />
-                </div>
-
-                <img
-                  className="profile-picture"
-                  src={this.state.data.image}
-                  alt=""
-                />
-                <div className="container">
-                  <div className="row">
-                    <div className="col-xs-8">
-                      <div className="profile-info">
-                        <Card.Title>
-                          {this.state.data.name} {this.state.data.surname}
-                        </Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted">
-                          {this.state.data.bio}
-                        </Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted">
-                          {this.state.data.area}{" "}
+      <Container className="homeContainer">
+        <Row style={{paddingBottom: '0'}}>
+        <img
+              className="img-fluid w-100 sideBarBanner"
+              alt=""
+              src="../assets/profilebanner.png"
+            />
+             <img
+              className=" profile-picture"
+              alt=""
+              src={this.state.data.image}
+            
+            />
+          </Row>
+          <Row style={{padding: "15px", paddingBottom: '0', paddingTop: '0'}}>
+          <div>
+          <p>{this.state.data.name} {this.state.data.surname}</p>
+          <p className="mb-2 text-muted"> {this.state.data.bio}</p>
+          <p className="text-muted"> {this.state.data.area}{" "}
                           <a className="contact-info-link" href="#">
                             Contact Info
-                          </a>
-                        </Card.Subtitle>
-                      </div>
-                    </div>
-                    <div className="col-xs-4">
-                      <div className="profile-experiences-preview">
+                          </a></p>
+          </div>
+            </Row>
+            <Row style={{padding: "15px", paddingBottom: '0'}}>
+            <div className="col-xs-4">
+                      <div>
                         <div>
                           <img
                             className="experiences-img"
@@ -137,23 +126,17 @@ class ProfileJumbotron extends React.Component {
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
+            </Row>
+            <Row style={{padding:'15px',  paddingBottom: '0'}}> 
+            <div className="mb-2 connections-title d-flex">
+            <p className="connections-amount">500+</p> connections
+            </div>
 
-                <div className="mutual-connections">
-                  <Card.Subtitle className="mb-2 connections-title d-flex">
-                    <p className="connections-amount">500+</p> connections
-                  </Card.Subtitle>
-                  <div className="d-flex mutual-section">
-                    <img
-                      className="mutual-connections-images"
-                      src="./assets/Tobias.jfif"
-                      alt=""
-                    ></img>
-                    <img
-                      className="mutual-connections-images-2"
-                      src="./assets/stefano.jfif"
-                    ></img>
+            </Row>
+            <Row style={{padding: '15px',  paddingBottom: '0'}}>
+
+            <div className="d-flex">
+                
                     <a className="mutual-connections-link text-muted" href="#">
                       <p className="mutual">
                         <b>12 mutual connections:</b> Tobia De Angelis, Stefano
@@ -161,10 +144,12 @@ class ProfileJumbotron extends React.Component {
                       </p>
                     </a>
                   </div>
-                </div>
-                <div className="profile-buttons-section d-flex">
-                  <Button variant="primary buttons">Connect</Button>
-                  <Button variant="outline-dark buttons">Message</Button>
+            </Row>
+            <Row  style={{padding: '15px'}} >
+
+          {/*   <div className=" d-flex justify-content-between" style={{flexDirection: "row", justifyContent: 'space-between!important'}}> */}
+                  <Button variant="primary buttons" style={{marginRight: '10px'}}>Connect</Button>
+                  <Button variant="outline-dark buttons" style={{marginRight: '10px'}}>Message</Button>
                   <DropdownButton
                     align="end"
                     id="dropdown-menu-align-end"
@@ -314,11 +299,11 @@ class ProfileJumbotron extends React.Component {
                       </svg>
                     </Dropdown.Item>
                   </DropdownButton>
-                </div>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
+                {/* </div> */}
+            </Row>
+
+              
+              
       </Container>
     );
   }

@@ -25,9 +25,9 @@ class ProfilePage extends React.Component {
     console.log("props are", this.props.match.params.userId)
     return (
       <Row>
-        <Col xs={4}> {/* here leftside bar */}
+        {/* <Col xs={12} md={4}> 
                      
-                        </Col>
+        </Col> */}
         <Col xs={12} md={8}>
           <Container className="d-flex flex-column">
             <ProfileJumbotron

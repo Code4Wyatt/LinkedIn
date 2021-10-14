@@ -11,6 +11,7 @@ class PostOnFeed extends React.Component {
       closeModal = () => this.setState({ showModal: false });
 
   render() {
+    console.log("post on feed", this.props.userId)
     return (
       <>
         <Container>
@@ -49,6 +50,7 @@ class PostOnFeed extends React.Component {
                 closeModal={this.closeModal}
                 showModal={this.state.showModal}
                 handleSubmit={this.handleSubmit}
+                userId={this.props.userId}
               />
             ) : null} 
               </Col>

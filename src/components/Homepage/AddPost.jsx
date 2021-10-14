@@ -37,7 +37,12 @@ class AddPost extends React.Component {
     }
   };
 
+  fetchProfile = async () => {
+    
+  }
+
   render() {
+    console.log(this.props.userId)
     return (
       <>
         <Modal
