@@ -4,10 +4,14 @@ import PostOnFeed from "./PostOnFeed"
 import { withRouter } from "react-router";
 import LeftSideBar from "./LeftSideBar";
 import "./Home.css"
+import SinglePost from "./SinglePost";
+import Posts from "./Posts";
+
 class Home extends React.Component {
 
 
     render() {
+        console.log(this.props.match.params.userId)
         return(
             <>
             <Container>
@@ -18,7 +22,9 @@ class Home extends React.Component {
                          <LeftSideBar />
                         </Col>
                         <Col xs={12} lg={8}> {/* here we have posts */}
-                        <PostOnFeed />
+                        <PostOnFeed userId={this.props.match.params.userId}/>
+                        <Posts />
+                        <SinglePost />
                         </Col>
                     </Row>
                       ssdad{/* ¢ */}
@@ -33,5 +39,6 @@ class Home extends React.Component {
         )
     }
 }
+
 
 export default withRouter(Home) 

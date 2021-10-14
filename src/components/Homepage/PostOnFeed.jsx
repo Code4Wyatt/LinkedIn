@@ -55,9 +55,9 @@ class PostOnFeed extends React.Component {
             </Row>
             <Row
               className="justify-content-between"
-              style={{ marginLeft: "15px", marginRight: "15px", width: '100%' }}
+              style={{ marginLeft: "15px", marginRight: "15px", width: '100%', marginBottom: '5px' }}
             >
-              <div className="d-inline-flex postFiles">
+              <div className="d-inline-flex hoverIcons">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={20}
@@ -71,7 +71,7 @@ class PostOnFeed extends React.Component {
                 </svg>
                 <p className="postFileName">Photo</p>
               </div>
-              <div className="d-inline-flex postFiles">
+              <div className="d-inline-flex hoverIcons">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={20}
@@ -84,7 +84,7 @@ class PostOnFeed extends React.Component {
                 </svg>
                 <p className="postFileName">Video</p>
               </div>
-              <div className="d-inline-flex postFiles">
+              <div className="d-inline-flex hoverIcons">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={20}
@@ -98,7 +98,7 @@ class PostOnFeed extends React.Component {
                 </svg>
                 <p className="postFileName">Event</p>
               </div>
-              <div className="d-inline-flex postFiles">
+              <div className="d-inline-flex hoverIcons">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={20}

@@ -9,7 +9,7 @@ import React from "react";
 import ProfilePage from "./components/ProfilePage";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Home from "./components/Homepage/Home";
-import LeftSideBar from "./components/Homepage/LeftSideBar";
+
 
 class App extends React.Component {
   state = {
