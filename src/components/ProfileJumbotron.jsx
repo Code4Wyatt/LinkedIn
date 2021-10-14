@@ -28,7 +28,7 @@ function ProfileJumbotron(props) {
   const fetchProfiles = async () => {
     try {
       const response = await fetch(
-        `https://striveschool-api.herokuapp.com/api/profile/${this.props.userId}`,
+        `https://striveschool-api.herokuapp.com/api/profile/${props.userId}`,
         {
           headers: {
             Authorization:
@@ -41,7 +41,7 @@ function ProfileJumbotron(props) {
       if (response.ok) {
         const data = await response.json();
         setData(data);
-        console.log("after the fetch", data);
+        console.log("After the fetch", data);
       }
     } catch (error) {
       console.log(error.message);
