@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import {
   Container,
@@ -11,6 +9,7 @@ import {
   DropdownButton,
   ListGroup,
 } from "react-bootstrap";
+import UploadPic from "./unploadPicture/UploadPic";
 
 class ProfileJumbotron extends React.Component {
   constructor() {
@@ -20,6 +19,7 @@ class ProfileJumbotron extends React.Component {
       data: [],
       error: false,
       toggle: false,
+      showModal: false,
     };
   }
   idHeader = () => {
@@ -38,7 +38,7 @@ class ProfileJumbotron extends React.Component {
           headers: {
             Authorization:
               "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTYzZmM1OWE4OTBjYzAwMTVjZjA3ZWQiLCJpYXQiOjE2MzM5NDI2MTgsImV4cCI6MTYzNTE1MjIxOH0.Aut8mQArR8IfI07aKxRS8oT9D5L-g1Uz5d36Mdj55L0",
-              "Content-type": "application/json",
+            "Content-type": "application/json",
           },
         }
       );
@@ -58,6 +58,7 @@ class ProfileJumbotron extends React.Component {
 
   async componentDidMount() {
     this.fetchProfiles();
+
     /* try {
       const response = await fetch(
         "https://striveschool-api.herokuapp.com/api/profile/me",
@@ -78,6 +79,7 @@ class ProfileJumbotron extends React.Component {
       this.setState({ error: true });
     } */
   }
+  /* toggleShowModel = () => ({ showModal: e.target.value }); */
 
   render() {
     return (
@@ -116,13 +118,25 @@ class ProfileJumbotron extends React.Component {
                           />
                           Strive School
                         </div>
-                        <div>
-                          <img
-                            className="experiences-img"
-                            src="./assets/ycombinator.jfif"
-                            alt=""
-                          ></img>{" "}
-                          Y Combinator
+                      </div>
+                      <div className="col-xs-4">
+                        <div className="profile-experiences-preview">
+                          <div>
+                            <img
+                              className="experiences-img"
+                              src="./assets/striveschool.jfif"
+                              alt=""
+                            />
+                            Strive School
+                          </div>
+                          <div>
+                            <img
+                              className="experiences-img"
+                              src="./assets/ycombinator.jfif"
+                              alt=""
+                            ></img>{" "}
+                            Y Combinator
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -172,94 +186,45 @@ class ProfileJumbotron extends React.Component {
                             d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
                           />
                         </svg>
-                      </div>
-                    </Dropdown.Item>
-                    <Dropdown.Item as="button">
-                      About{" "}
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-chevron-down"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-                        />
-                      </svg>
-                    </Dropdown.Item>
-                    <ListGroup>
-                      <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                      <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-                      <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-                      <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-                      <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-                    </ListGroup>
-                    <Dropdown.Item as="button">
-                      Featured{" "}
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-chevron-down"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-                        />
-                      </svg>
-                    </Dropdown.Item>
-                    <Dropdown.Item
-                      as="button"
-                      /*onclick={(e) => {
+                        </div>
+                      </Dropdown.Item>
+                      <ListGroup>
+                        <ListGroup.Item>Cras justo odio</ListGroup.Item>
+                        <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+                        <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+                        <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+                        <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+                      </ListGroup>
+                      <Dropdown.Item as="button">
+                        Featured{" "}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-chevron-down"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        as="button"
+                        /*onclick={(e) => {
                         this.toggleSelected;
                       }} */
-                    >
-                      Background{" "}
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-chevron-down"
-                        viewBox="0 0 16 16"
                       >
-                        <path
-                          fill-rule="evenodd"
-                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-                        />
-                      </svg>
-                    </Dropdown.Item>
-                    <Dropdown.Item as="button">
-                      Skills{" "}
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-chevron-down"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-                        />
-                      </svg>
-                    </Dropdown.Item>
-                    <Dropdown.Item as="button">
-                      Accomplishments{" "}
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-chevron-down"
-                        viewBox="0 0 16 16"
-                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-chevron-down"
+                          viewBox="0 0 16 16"
+                        >
                         <path
                           fill-rule="evenodd"
                           d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"

@@ -5,7 +5,7 @@ class AddPost extends React.Component {
   state = {
     text: "",
   };
-  han
+  han;
 
   handleSubmit = async (e) => {
     e.preventDefault();
@@ -50,7 +50,6 @@ class AddPost extends React.Component {
           onHide={this.props.closeModal}
           size="lg"
           aria-labelledby="contained-modal-title-vcenter"
-          
         >
           <Modal.Header closeButton>
             <Modal.Title id="example-custom-modal-styling-title">
@@ -61,10 +60,11 @@ class AddPost extends React.Component {
             <Form.Group controlId="exampleForm.ControlTextarea1">
               <Form.Label>Example textarea</Form.Label>
               <Form.Control
-               as="textarea" 
-               rows={3} 
-               placeholder="What do you want to talk about?" 
-               onChange={(e)=> this.setState({text: e.target.value})}/>
+                as="textarea"
+                rows={3}
+                placeholder="What do you want to talk about?"
+                onChange={(e) => this.setState({ text: e.target.value })}
+              />
             </Form.Group>
           </Modal.Body>
           <Modal.Footer>
@@ -82,4 +82,4 @@ class AddPost extends React.Component {
   }
 }
 
-export default AddPost
+export default AddPost;
