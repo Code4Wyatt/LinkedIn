@@ -1,12 +1,12 @@
 import { Modal, Button, Col } from "react-bootstrap";
 import { useState, useRef } from "react";
 import { AiOutlineCamera } from "react-icons/ai";
+import { FaBullseye } from "react-icons/fa";
 
 const UploadPic = (props) => {
-  const [lgShow, setLgShow] = useState(false);
-
   const input = useRef();
   const fileUpload = async (e) => {
+    e.preventDefault();
     try {
       const file = e.target.files[0];
       const formData = new FormData();
@@ -17,7 +17,7 @@ const UploadPic = (props) => {
         `https://striveschool-api.herokuapp.com/api/profile/${userId}/picture`,
         {
           method: "POST",
-          body: formData,
+          body: JSON.stringify(formData),
           headers: {
             Authorization:
               "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTM1ZTM0MDdiZTZjMTAwMTVmOWRiYTUiLCJpYXQiOjE2MzA5MjY3NTYsImV4cCI6MTYzMjEzNjM1Nn0.PLWB0OwFXpY_BhYhvSaxQ1MXjj62jzUvJQCe6_HUleU",
@@ -28,6 +28,8 @@ const UploadPic = (props) => {
         const responseData = await response.json();
         console.log(responseData);
         //alert('successfully updated')
+        props.setShowModal(false);
+
         // props.fetch()
       } else {
         console.log(response);
@@ -39,17 +41,14 @@ const UploadPic = (props) => {
 
   return (
     <>
-      <Col
-        className="flex-column mb-0 modal-edit col-3 d-flex second-svg align-items-center justify-content-center"
-        onClick={() => setLgShow(true)}
-      >
+      {/* <Col className="flex-column mb-0 modal-edit col-3 d-flex second-svg align-items-center justify-content-center">
         <AiOutlineCamera className="mb-1 ml-1 mt-1" size="1x" />
         <span className="mb-0 text-white footer-span ml-1">Add Photo</span>
-      </Col>
+      </Col> */}
       <Modal
         size="lg"
-        show={lgShow}
-        onHide={() => setLgShow(false)}
+        show={props.showModal}
+        onHide={() => props.setShowModal(false)}
         aria-labelledby="example-modal-sizes-title-lg"
       >
         <Modal.Header closeButton>
@@ -69,7 +68,8 @@ const UploadPic = (props) => {
               src={props.profile.image}
               alt="#"
               className="profile-pic-upload rounded-circle img-fluid"
-              onClick={() => setLgShow(true)}
+              onChange={(e) => props.setShowModal(e.target.value)}
+              /*  onClick={() => props.setShowModal(true)} */
             />
           </div>
           <span className="d-flex justify-content-center mt-3 modal-body-span">
@@ -93,6 +93,13 @@ const UploadPic = (props) => {
             }}
           >
             Upload Photo
+          </Button>
+          <Button
+            variant="primary"
+            type="submit"
+            onClick={(e) => fileUpload(e)}
+          >
+            Submit
           </Button>
         </Modal.Footer>
       </Modal>
