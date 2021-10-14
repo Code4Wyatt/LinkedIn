@@ -119,26 +119,7 @@ class ProfileJumbotron extends React.Component {
                           Strive School
                         </div>
                       </div>
-                      <div className="col-xs-4">
-                        <div className="profile-experiences-preview">
-                          <div>
-                            <img
-                              className="experiences-img"
-                              src="./assets/striveschool.jfif"
-                              alt=""
-                            />
-                            Strive School
-                          </div>
-                          <div>
-                            <img
-                              className="experiences-img"
-                              src="./assets/ycombinator.jfif"
-                              alt=""
-                            ></img>{" "}
-                            Y Combinator
-                          </div>
-                        </div>
-                      </div>
+                      
                     </div>
             </Row>
             <Row style={{padding:'15px',  paddingBottom: '0'}}> 
