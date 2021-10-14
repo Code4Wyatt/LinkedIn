@@ -25,7 +25,7 @@ function ProfileJumbotron(props) {
     const claudiaId = "6163fc59a890cc0015cf07ed";
   };
 
-  fetchProfiles = async () => {
+ const fetchProfiles = async () => {
     try {
       const response = await fetch(
         `https://striveschool-api.herokuapp.com/api/profile/${this.props.userId}`,
@@ -49,7 +49,7 @@ function ProfileJumbotron(props) {
     }
   };
 
-  toggleSelected = (e) => e.preventDefault;
+  const toggleSelected = (e) => e.preventDefault;
 
   useEffect(() => {
     fetchProfiles();
