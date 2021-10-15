@@ -24,7 +24,7 @@ class App extends React.Component {
     return (
       <>
        <div className="App">
-          <ProfileNavbar />
+          <ProfileNavbar userId={this.state.ourProfile} />
           <Router>
             <Switch>
               <Route path="/home/:userId">
@@ -81,7 +81,7 @@ class App extends React.Component {
                       }
                     >
                       Home
-                    </Link>
+                    </Link> 
                   </Form>
                 </Container>
               </Route>

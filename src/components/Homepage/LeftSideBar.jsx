@@ -47,6 +47,7 @@ class LeftSideBar extends React.Component {
   }
 
   render() {
+    console.log("left", this.props.profile)
     return (
       <>
         <Container className="homeContainer">
@@ -71,9 +72,9 @@ class LeftSideBar extends React.Component {
               }}
               className="welcomeName"
             >
-              Welcome, {this.state.data.name}!
+              Welcome, {this.props.profile.name}!
             </span>
-            <span style={{ padding: "10px" }}>{this.state.data.bio}</span>
+            <span style={{ padding: "10px" }}>{this.props.profile.bio}</span>
           </Row>
           <Row
             className="justify-content-between borderBottomRow hoverRow"

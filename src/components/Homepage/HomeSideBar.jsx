@@ -47,7 +47,7 @@ class HomeSideBar extends React.Component {
   };
 
   render() {
-    const viewedPeople = this.state.people.slice(0, 3);
+    const viewedPeople = this.state.people.slice(15, 18);
     const knowPeople = this.state.people.slice(6, 11);
     console.log("in the render", knowPeople);
 
@@ -69,7 +69,7 @@ class HomeSideBar extends React.Component {
                     <div className="d-flex" style={{marginBottom:'28rem'}}>
                       <img
                         className="img-fluid h-100 w-100 "
-                        src={logo}
+                        src={p.image}
                         style={{ borderRadius: "80px"}}
                       />
                     </div>

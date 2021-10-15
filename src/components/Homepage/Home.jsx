@@ -8,6 +8,7 @@ import SinglePost from "./SinglePost";
 import Posts from "./Posts";
 import HomeSideBar from "./HomeSideBar";
 
+
 class Home extends React.Component {
 
     state= {
@@ -62,7 +63,7 @@ class Home extends React.Component {
                 <Col xs={12} lg={4}>
                   {" "}
                   {/* here leftside bar */}
-                  <LeftSideBar />
+                  <LeftSideBar profile={this.state.profile} />
                 </Col>
                 <Col xs={12} lg={8}>
                   {" "}
