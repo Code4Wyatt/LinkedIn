@@ -19,7 +19,7 @@ class SinglePost extends React.Component {
     try {
         
       const response = await fetch(
-        `https://striveschool-api.herokuapp.com/api/posts/${this.props.postId} `,  { headers: {
+        `https://striveschool-api.herokuapp.com/api/posts/${this.props.post._id} `,  { headers: {
             'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTYzZmM1OWE4OTBjYzAwMTVjZjA3ZWQiLCJpYXQiOjE2MzM5NDI2MTgsImV4cCI6MTYzNTE1MjIxOH0.Aut8mQArR8IfI07aKxRS8oT9D5L-g1Uz5d36Mdj55L0',
           'Content-type': 'application/json',
 
@@ -65,11 +65,11 @@ class SinglePost extends React.Component {
               <Col className="col-md-2 mr-2 p-0">
                 <Card.Img
                   variant="top-left"
-                  className="shopifylogo"
-                  style={{ borderRadius: "15px" }}
-                  src={logo}
-                  width={40}
-                  height={40}
+                /*   className="shopifylogo" */
+                  style={{ borderRadius: "80px" }}
+                  src={this.state.post.image}
+                  width={60}
+                  height={60}
                 />
               </Col>
               <Col className="col-md-9">

@@ -9,11 +9,14 @@ import { IoIosBriefcase } from "react-icons/io";
 import { IoSearchSharp } from "react-icons/io5";
 import { RiMessage3Fill } from "react-icons/ri";
 import { CgMenuGridR } from "react-icons/cg";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { withRouter} from 'react-router'
 
-export default function ProfileNavbar() {
-
+ function ProfileNavbar(userId) {
+   console.log(userId, "nav")
     return (
         <div id='ProfileNavbar'>
+           
             <Navbar className='justify-content-between align-items-center p-0 flex-nowrap mt-2'>
                 <Row className=' align-items-center flex-nowrap' style={{marginLeft:'160px'}}>
                     <Navbar.Brand > <img src={LinkedinLogo} alt="logo"style={{width: '40px',marginTop:'12px'}} /> </Navbar.Brand>
@@ -46,7 +49,7 @@ export default function ProfileNavbar() {
                             <div className='menuItems'>
                             
                             <div  style={{ fontSize: '30px' }}><AiTwotoneHome   /></div>
-                                <Nav.Link>Home</Nav.Link>
+                            <Nav.Link>Home</Nav.Link> 
                             </div>
                             
                             <div className='menuItems'>
@@ -100,6 +103,10 @@ export default function ProfileNavbar() {
                 </Row>
 
             </Navbar>
+         
         </div>
     )
 }
+
+
+export default ProfileNavbar

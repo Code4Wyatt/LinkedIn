@@ -5,8 +5,11 @@ import {Container} from 'react-bootstrap'
 class Posts extends React.Component {
 
     state= {
-        posts: []
+        posts: [],
+       
     }
+
+  
 
     fetchPosts = async () => {
 
@@ -46,15 +49,21 @@ class Posts extends React.Component {
         this.fetchPosts()
        
      }
+
+     componentDidUpdate = async (prevState) => {
+         
+         if (prevState.posts !== this.state.posts) {
+             this.fetchPosts()}
+     }
     
     render() {
-        const postsToDisplay = this.state.posts.slice(0, 5)
+        const postsToDisplay = this.state.posts.slice(1725)
         console.log(postsToDisplay)
         return (
             <>
             {postsToDisplay.map((p) => 
             <div key={p._id}>
-                <SinglePost postId={p._id} />
+                <SinglePost post={p} />
             </div>)}
             </>
         )

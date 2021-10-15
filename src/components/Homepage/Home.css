@@ -121,3 +121,30 @@
     cursor: pointer;
     
 }
+
+.addPost-btn {
+
+  width: fit-content;
+  height: fit-content;
+  color: rgb(75, 73, 73) !important;
+  border: 1px solid grey !important;
+  font-size: 13px;
+  font-weight: 500;
+  
+}
+
+#textAreaPost {
+
+  border-color: white;
+ 
+}
+
+#textAreaPost::selection {
+  border-color: white !important;
+  outline: none !important;
+}
+
+#submit-addpost {
+
+  background-color: blue !important;
+}

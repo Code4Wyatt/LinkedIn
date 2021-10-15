@@ -8,6 +8,7 @@ import SinglePost from "./SinglePost";
 import Posts from "./Posts";
 import HomeSideBar from "./HomeSideBar";
 
+
 class Home extends React.Component {
 
     state= {
