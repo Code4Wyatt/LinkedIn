@@ -5,6 +5,7 @@ import { FcKey } from "react-icons/fc";
 import { BsFillBookmarkFill } from "react-icons/bs";
 import Row from "react-bootstrap/Row";
 
+
 class LeftSideBar extends React.Component {
   constructor() {
     super();
@@ -64,7 +65,7 @@ class LeftSideBar extends React.Component {
             />
           </Row>
           <Row className="justify-content-center borderBottomRow">
-            <span
+           <Link to={"/profile/" + this.props.profile._id}> <span
               style={{
                 textAlign: "center",
                 fontWeight: "bold",
@@ -74,6 +75,7 @@ class LeftSideBar extends React.Component {
             >
               Welcome, {this.props.profile.name}!
             </span>
+            </Link>
             <span style={{ padding: "10px" }}>{this.props.profile.bio}</span>
           </Row>
           <Row
