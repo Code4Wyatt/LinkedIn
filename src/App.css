@@ -74,7 +74,6 @@
   margin-top: 13px;
 }
 
-
 span {
   display: block;
 }
@@ -144,8 +143,6 @@ h2 {
   border-radius: 15px;
 }
 
-
-
 .profile-banner {
   position: relative;
   left: -20px;
@@ -155,16 +152,13 @@ h2 {
 }
 
 .profile-picture {
- 
- 
-  
   border-radius: 50% !important;
   height: 150px;
-  width: 150px!important;
+  width: 150px !important;
   z-index: 1;
   position: relative;
-   top: -65px;
-  right: -80px; 
+  top: -65px;
+  right: -80px;
   border: 3px solid white;
 }
 
@@ -240,8 +234,6 @@ h2 {
   bottom: 130px;
 }
 
-
-
 /* Button {
   border-bottom-left-radius: 50px !important;
   border-top-right-radius: 50px !important;
@@ -261,6 +253,8 @@ h2 {
   margin-top: 24px;
   width: 70%;
   background-color: white;
+  height: fit-content;
+  padding-bottom: 15px;
 }
 
 .sideBarList {
@@ -281,7 +275,7 @@ h2 {
   flex-direction: column;
 }
 
-.access-tools-btn{
+.access-tools-btn {
   color: grey;
   font-size: 12px;
 }
@@ -344,12 +338,10 @@ h2 {
 }
 
 .connect-btn {
-
   color: white !important;
   background-color: blue !important;
   font-weight: bold;
 }
-#footer-font p{
-font-size: 15px;
-  
+#footer-font p {
+  font-size: 15px;
 }
