@@ -139,7 +139,7 @@ h2 {
 
 .card {
   /*  overflow: hidden; */
-  max-height: 540px;
+  /* max-height: 540px; */
   border-radius: 15px;
 }
 
@@ -344,4 +344,22 @@ h2 {
 }
 #footer-font p {
   font-size: 15px;
+}
+
+#addExButton {
+
+  width: 50px;
+  height: 50px;
+  border-color: white !important;
+  background-color: white !important;
+  border-radius: 80px !important;
+  text-align: center;
+  padding: 0% !important;
+}
+
+#addExButton:hover {
+
+  background-color: rgba(161, 159, 159, 0.24) !important;
+  border-color: white !important;
+
 }

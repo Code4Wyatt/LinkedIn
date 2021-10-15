@@ -125,7 +125,7 @@ function ProfileJumbotron(props) {
         setShowModal={setShowModal}
         profile={data}
       />
-      ;
+      
       <Container className="homeContainer">
         <Row style={{ paddingBottom: "0" }}>
           <img

@@ -14,12 +14,7 @@ import LeftSideBar from "./Homepage/LeftSideBar";
 
 
 class ProfilePage extends React.Component {
-  state = {
-    showModal: false,
-  };
-
-  showModal = () => this.setState({ showModal: true });
-  closeModal = () => this.setState({ showModal: false });
+ 
 
   render() {
     console.log("props are", this.props)
@@ -39,15 +34,7 @@ class ProfilePage extends React.Component {
             <ProfileSkill />
             <ExperienceEducation userId= {this.props.match.params.userId}/>
 
-            <Button onClick={this.showModal}>Add experience</Button>
-
-           {this.state.showModal ? (
-              <AddExperience
-                closeModal={this.closeModal}
-                showModal={this.state.showModal}
-                handleSubmit={this.handleSubmit}
-              />
-            ) : null} 
+          
           </Container>
         </Col>
         <Col xs={12} md={4}>
