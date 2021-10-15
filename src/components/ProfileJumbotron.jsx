@@ -16,7 +16,14 @@ import UploadPic from "./unploadPicture/UploadPic";
 import { withRouter } from "react-router-dom";
 
 function ProfileJumbotron(props) {
-  const [data, setData] = useState([]);
+  /* let retrievedIdFromURL = match.params.userId; */
+  const [data, setData] = useState({
+    name: "",
+    area: "",
+    surname: "",
+    bio: "",
+    area: "",
+  });
   const [error, setError] = useState(false);
   const [toggle, setToggle] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -69,22 +76,17 @@ function ProfileJumbotron(props) {
     // about this specific event, which would instead refresh the page and insert some
     // querystrings into the address bar
 
-    const myDetails = {
-      name: data.value,
-      surname: data.value,
-      bio: data.value,
-      area: data.value,
-    };
-
     try {
       const response = await fetch(
-        `https://striveschool-api.herokuapp.com/api/profile/${props.userId}`,
+        "https://striveschool-api.herokuapp.com/api/profile/",
         {
           method: /* retrievedIdFromURL ? */ "PUT" /* : "POST", */,
-          body: JSON.stringify(myDetails),
+          body: JSON.stringify(data),
 
           headers: {
             "Content-Type": "application/json",
+            Authorization:
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTYzZmM1OWE4OTBjYzAwMTVjZjA3ZWQiLCJpYXQiOjE2MzM5NDI2MTgsImV4cCI6MTYzNTE1MjIxOH0.Aut8mQArR8IfI07aKxRS8oT9D5L-g1Uz5d36Mdj55L0",
           },
         }
       );
@@ -96,14 +98,14 @@ function ProfileJumbotron(props) {
         ) {
           alert(
             "success",
-            "Appointment with an id of " +
+            "Profile with an id of " +
               respEvent._id +
               " was EDITED successfully"
           );
         } else {
           alert(
             "info",
-            "Appointment created successfully with an id of " + respEvent._id
+            "Profile created successfully with an id of " + respEvent._id
           );
         }
       }
@@ -113,7 +115,6 @@ function ProfileJumbotron(props) {
   };
 
   useEffect(() => {
-    /* let retrievedIdFromURL = match.params.props.userId; */
     fetchProfiles();
   }, []);
 
@@ -197,6 +198,10 @@ function ProfileJumbotron(props) {
                             type="text"
                             id="name"
                             className="form-control"
+                            value={data.name}
+                            onChange={(e) =>
+                              setData({ ...data, name: e.target.value })
+                            }
                             placeholder="Specify ur name..."
                           />
                         </div>
@@ -206,6 +211,10 @@ function ProfileJumbotron(props) {
                             type="text"
                             id="name"
                             className="form-control"
+                            value={data.surname}
+                            onChange={(e) =>
+                              setData({ ...data, surname: e.target.value })
+                            }
                             placeholder="Specify ur name..."
                           />
                         </div>
@@ -215,6 +224,10 @@ function ProfileJumbotron(props) {
                             id="description"
                             type="textarea"
                             className="form-control"
+                            value={data.bio}
+                            onChange={(e) =>
+                              setData({ ...data, bio: e.target.value })
+                            }
                             placeholder="Write a description"
                           ></textarea>
                         </div>
@@ -224,6 +237,10 @@ function ProfileJumbotron(props) {
                             type="text"
                             id="name"
                             className="form-control"
+                            value={data.area}
+                            onChange={(e) =>
+                              setData({ ...data, area: e.target.value })
+                            }
                             placeholder="Specify ur location..."
                           />
                         </div>
@@ -235,7 +252,7 @@ function ProfileJumbotron(props) {
                           type="submit"
                           className="btn btn-primary"
                           style={{ background: "blue" }}
-                          onClick={handleClose}
+                          onClick={handleSubmit}
                         >
                           Submit
                         </button>
