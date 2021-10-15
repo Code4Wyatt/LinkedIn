@@ -1,14 +1,44 @@
 import React from "react";
 import "../Skill.css";
 import { BsPencil } from "react-icons/bs";
-import { Card, Button, Modal, Col, Row, Container } from "react-bootstrap";
+import {
+  Card,
+  Button,
+  Modal,
+  Col,
+  Row,
+  Container,
+  Form,
+} from "react-bootstrap";
 import { useState, useEffect } from "react";
 
 export default function ProfileSkill() {
   const [show, setShow] = useState(false);
+  const [showSkillForm, setShowSkillForm] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const showForm = () => setShowSkillForm(false);
+
+  const skillForm = () => {
+    return (
+      <Form>
+        <Form.Group className="d-flex" controlId="formBasicEmail">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control type="email" placeholder="Enter email" />
+          <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+          </Form.Text>
+        </Form.Group>
+
+
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
+    );
+  };
+
   return (
     <div className="container ml-9" id="ProfileSkill">
       <Card className="skill-card">
@@ -87,17 +117,13 @@ export default function ProfileSkill() {
                             </Col>
                           </Row>
                         </Container>
-                      </Modal.Body>
-                      <div id="myDIV" class="header">
-                        <input
-                          type="text"
-                          id="myInput"
-                          placeholder="Skill..."
-                        />
-                        <span onclick="newElement()" class="addBtn">
+                        <Button onClick={showForm} >
                           Add
-                        </span>
-                      </div>
+                        </Button>
+                        {showForm ? <skillForm /> : null}
+                      </Modal.Body>
+                      
+                      
                       <Modal.Footer>
                         <Button
                           variant="primary"
