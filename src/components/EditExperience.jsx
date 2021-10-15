@@ -4,7 +4,7 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/button";
 import { Row, Col } from "react-bootstrap";
 
-class AddExperience extends React.Component {
+class EditExperience extends React.Component {
   state = {
     workExperience: {
       role: "",
@@ -16,23 +16,23 @@ class AddExperience extends React.Component {
     },
   };
 
-  handleInput = (propertyName, value) => {
+  /*  handleInput = (propertyName, value) => {
     this.setState({
       workExperience: {
         ...this.state.workExperience,
         [propertyName]: value,
       },
     });
-  };
+  }; */
 
   handleSubmit = async (e) => {
     e.preventDefault();
 
     console.log(this.state.workExperience);
-    let id = "6163fc59a890cc0015cf07ed";
+
     try {
       let response = await fetch(
-        `https://striveschool-api.herokuapp.com/api/profile/:${id}/experiences`,
+        `https://striveschool-api.herokuapp.com/api/profile/experiences/`,
         {
           method: "PUT",
           body: JSON.stringify(this.state.workExperience),
@@ -45,23 +45,25 @@ class AddExperience extends React.Component {
       );
       console.log(response);
       if (response.ok) {
-        alert("Work experience successfully added!");
-        this.setState({
-          // this is the initial state of my form!
-          workExperience: {
-            role: "",
-            company: "",
-            startDate: "",
-            endDate: "",
-            description: "",
-            area: "",
-          },
-        });
-      } else {
-        alert("Something went wrong ");
+        const respEvent = await response.json();
+        if (
+          `https://striveschool-api.herokuapp.com/api/profile/:${this.props.userId}/experiences`
+        ) {
+          alert(
+            "success",
+            "Profile with an id of " +
+              respEvent._id +
+              " was EDITED successfully"
+          );
+        } else {
+          alert(
+            "info",
+            "Profile created successfully with an id of " + respEvent._id
+          );
+        }
       }
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
+      alert("danger", err.message);
     }
   };
 
@@ -69,15 +71,15 @@ class AddExperience extends React.Component {
     return (
       <>
         <Modal
-          show={this.props.showModal}
-          onHide={this.props.closeModal}
+          show={this.props.showModalEdit}
+          onHide={this.props.closeModalEdit}
           size="lg"
           aria-labelledby="contained-modal-title-vcenter"
           centered
         >
           <Modal.Header closeButton>
             <Modal.Title id="example-custom-modal-styling-title">
-              Add experience
+              Edit experience
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
@@ -85,7 +87,14 @@ class AddExperience extends React.Component {
               <Form.Label className="workFormLabel">Title° </Form.Label>
               <Form.Control
                 type="text"
-                onChange={(e) => this.handleInput("role", e.target.value)}
+                onChange={(e) =>
+                  this.setState({
+                    workExperience: {
+                      ...this.state.workExperience,
+                      role: e.target.value,
+                    },
+                  })
+                }
                 value={this.state.workExperience.role}
                 placeholder="Ex: Full-Stack Developer"
               />
@@ -116,7 +125,14 @@ class AddExperience extends React.Component {
               <Form.Label className="workFormLabel">Company name° </Form.Label>
               <Form.Control
                 type="text"
-                onChange={(e) => this.handleInput("company", e.target.value)}
+                onChange={(e) =>
+                  this.setState({
+                    workExperience: {
+                      ...this.state.workExperience,
+                      company: e.target.value,
+                    },
+                  })
+                }
                 value={this.state.workExperience.company}
                 placeholder="Ex: Microsoft"
               />
@@ -125,7 +141,14 @@ class AddExperience extends React.Component {
               <Form.Label className="workFormLabel">Location </Form.Label>
               <Form.Control
                 type="text"
-                onChange={(e) => this.handleInput("area", e.target.value)}
+                onChange={(e) =>
+                  this.setState({
+                    workExperience: {
+                      ...this.state.workExperience,
+                      area: e.target.value,
+                    },
+                  })
+                }
                 value={this.state.workExperience.area}
                 placeholder="Ex: London, United Kindom"
               />
@@ -160,7 +183,12 @@ class AddExperience extends React.Component {
                   <Form.Control
                     type="text"
                     onChange={(e) =>
-                      this.handleInput("startDate", e.target.value)
+                      this.setState({
+                        workExperience: {
+                          ...this.state.workExperience,
+                          startDate: e.target.value,
+                        },
+                      })
                     }
                     value={this.state.workExperience.startDate}
                     placeholder="Year"
@@ -195,7 +223,12 @@ class AddExperience extends React.Component {
                   <Form.Control
                     type="text"
                     onChange={(e) =>
-                      this.handleInput("endDate", e.target.value)
+                      this.setState({
+                        workExperience: {
+                          ...this.state.workExperience,
+                          endDate: e.target.value,
+                        },
+                      })
                     }
                     value={this.state.workExperience.endDate}
                     placeholder="Year"
@@ -209,18 +242,16 @@ class AddExperience extends React.Component {
                 as="textarea"
                 rows={3}
                 onChange={(e) =>
-                  this.handleInput("description", e.target.value)
+                  this.setState({
+                    workExperience: {
+                      ...this.state.workExperience,
+                      description: e.target.value,
+                    },
+                  })
                 }
                 value={this.state.workExperience.description}
               />
             </Form.Group>
-
-            {/*  <Form.Group>
-              <Form.File
-                id="exampleFormControlFile1"
-                label="Example file input"
-              />
-            </Form.Group>  */}
           </Modal.Body>
           <Modal.Footer>
             <Button
@@ -236,5 +267,4 @@ class AddExperience extends React.Component {
     );
   }
 }
-
-export default AddExperience;
+export default EditExperience;
