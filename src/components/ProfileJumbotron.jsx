@@ -125,7 +125,7 @@ function ProfileJumbotron(props) {
         setShowModal={setShowModal}
         profile={data}
       />
-      
+
       <Container className="homeContainer">
         <Row style={{ paddingBottom: "0" }}>
           <img
@@ -141,7 +141,10 @@ function ProfileJumbotron(props) {
             onClick={() => setShowModal(true)}
           />
         </Row>
-        <Row className="d-flex justify-content-between"style={{ padding: "15px", paddingBottom: "0", paddingTop: "0" }}>
+        <Row
+          className="d-flex justify-content-between"
+          style={{ padding: "15px", paddingBottom: "0", paddingTop: "0" }}
+        >
           <div>
             <p>
               {data.name} {data.surname}
@@ -155,7 +158,7 @@ function ProfileJumbotron(props) {
               </a>
             </p>
           </div>
-          <Button id="addExButton" >
+          <Button id="addExButton">
             <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
