@@ -62,7 +62,7 @@ class Home extends React.Component {
                 <Col xs={12} lg={4}>
                   {" "}
                   {/* here leftside bar */}
-                  <LeftSideBar />
+                  <LeftSideBar profile={this.state.profile} />
                 </Col>
                 <Col xs={12} lg={8}>
                   {" "}
