@@ -22,7 +22,7 @@ class ProfilePage extends React.Component {
   closeModal = () => this.setState({ showModal: false });
 
   render() {
-    console.log("props are", this.props.match.params.userId)
+    console.log("props are", this.props)
     return (
       <Row>
         {/* <Col xs={12} md={4}> 
@@ -37,7 +37,7 @@ class ProfilePage extends React.Component {
             <SecondCard />
             <Deshboard />
             <ProfileSkill />
-            <ExperienceEducation />
+            <ExperienceEducation userId= {this.props.match.params.userId}/>
 
             <Button onClick={this.showModal}>Add experience</Button>
 
